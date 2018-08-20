@@ -14,7 +14,7 @@
       height: 96%;
       background-color: yellow;
       border-radius: 50%;
-      border: 1px solid black;
+
   }
   
   .outer-circle {
@@ -23,7 +23,7 @@
       height: 400px;
       background-color: gray;
       border-radius: 50%;
-      border: 1px solid black;
+    
   }
   
   .second-hand {
@@ -32,7 +32,7 @@
       left: 0%;
       width: 100%;
       height: 1%;
-      border: 1px solid black;
+     
   }
 
   .visible-part-min-hand, .visible-part-hour-hand, .visible-part-sec-hand{
@@ -47,7 +47,7 @@
     width: 45%;
     height: 100%;
     box-shadow: 3px 3px 5px #888888;
-    border: 1px solid black;
+    
   }
   
   .minute-hand {
@@ -56,7 +56,7 @@
       left: 0%;
       width: 100%;
       height: 2%;
-      border: 1px solid black;
+    
   }
   
   .visible-part-min-hand{
@@ -64,7 +64,7 @@
     width: 38%;
     height: 100%;
     box-shadow: 3px 3px 5px #888888;
-    border: 1px solid black;
+   
   }
   
   .hour-hand {
@@ -73,7 +73,7 @@
       left: 0%;
       width: 100%;
       height: 3%;
-      border: 1px solid black;
+      
   }
   
   .visible-part-hour-hand{
@@ -81,7 +81,7 @@
     width: 30%;
     height: 100%;
     box-shadow: 3px 3px 5px #888888;
-    border: 1px solid black;
+  
   }
   
   
@@ -94,5 +94,6 @@
       background: black;
       border-radius: 50%;
       box-shadow: 3px 3px 5px #888888;
-      border: 1px solid black;
+      
   }
+

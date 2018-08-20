@@ -1,20 +1,23 @@
 import React, { Component } from 'react';
+import MinuteScale from './MinuteScale'
 import './Clock.css';
 
 class Clock extends Component {
     state = {
         timer: setInterval(this.setHands.bind(this), 1000),
-        hourHandAngle: -90,
+        hourHandAngle:   -90,
         minuteHandAngle: -90,
         secondHandAngle: -90
     }
 
     componentDidMount(){
-        this.createMinuteScale();
-        this.createHourScale();
+        //this.createMinuteScale();
+        //this.createHourScale();
     }
 
-    createMinuteScale(){
+
+
+     createMinuteScale(){
         var innerCircle = document.getElementsByClassName("inner-circle")[0];
         for(let i = 0; i<60; i++){
             var diameter = document.createElement("div");
@@ -25,7 +28,7 @@ class Clock extends Component {
             diameter.appendChild(M);
             innerCircle.appendChild(diameter);
           }
-    }
+    } 
 
     createHourScale(){
         var innerCircle = document.getElementsByClassName("inner-circle")[0];
@@ -59,6 +62,7 @@ class Clock extends Component {
             <div className="container">
                 <div className="outer-circle">
                     <div className="inner-circle">
+                        <MinuteScale/>
                         <div className="minute-hand" style={{transform : `rotate(${this.state.minuteHandAngle}deg)`}}>
                         <div className="visible-part-min-hand"></div>
                         </div>
