@@ -6,7 +6,7 @@ class  MinuteHand extends Component {
             <div className="minute-hand" style={{transform : `rotate(${this.props.minuteHandAngle}deg)`}}>
                 <div className="visible-part-min-hand"></div>
             </div>
-            )
+        )
 
     }
 }

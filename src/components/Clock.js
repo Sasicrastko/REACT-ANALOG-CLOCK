@@ -8,13 +8,13 @@ import './Clock.css';
 
 class Clock extends Component {
     state = {
-        timer: setInterval(this.setHands.bind(this), 1000),
+        timer: setInterval(this.setHandAngles.bind(this), 1000),
         hourHandAngle:   0, 
         minuteHandAngle: 0,
         secondHandAngle: 0
     }
 
-    setHands() {
+    setHandAngles(){
         const d = new Date();
         const sec = d.getSeconds();
         const min = d.getMinutes();
