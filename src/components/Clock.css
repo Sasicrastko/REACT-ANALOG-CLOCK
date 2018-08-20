@@ -19,8 +19,8 @@
   
   .outer-circle {
       position: absolute;
-      width: 410px;
-      height: 410px;
+      width: 400px;
+      height: 400px;
       background-color: gray;
       border-radius: 50%;
       border: 1px solid black;
