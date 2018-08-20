@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 class  HourScale extends Component {
-    state = {  }
     render() {
         var arr = []; //fill this array with 12 numbers
         var counter = 12;

@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import MinuteScale from './MinuteScale';
 import HourScale from './HourScale';
+import MinuteHand from './MinuteHand';
+import HourHand from './HourHand';
+import SecondHand from './SecondHand';
 import './Clock.css';
 
 class Clock extends Component {
@@ -32,15 +35,9 @@ class Clock extends Component {
                     <div className="inner-circle">
                         <MinuteScale/>
                         <HourScale/>
-                        <div className="minute-hand" style={{transform : `rotate(${this.state.minuteHandAngle}deg)`}}>
-                            <div className="visible-part-min-hand"></div>
-                        </div>
-                        <div className="hour-hand" style={{transform : `rotate(${this.state.hourHandAngle}deg)`}}>
-                            <div className="visible-part-hour-hand"></div>
-                        </div>
-                        <div className="second-hand" style={{transform : `rotate(${this.state.secondHandAngle}deg)`}}>
-                            <div className="visible-part-sec-hand"></div>
-                        </div>
+                        <MinuteHand minuteHandAngle={this.state.minuteHandAngle}/>
+                        <HourHand hourHandAngle={this.state.hourHandAngle}/>
+                        <SecondHand secondHandAngle={this.state.secondHandAngle}/>
                         <div className="center-dot"></div>
                     </div>
                 </div>

@@ -3,7 +3,6 @@
     margin: auto;
     margin-top: 50px;
     width: 40%;
-    color: gray;
   }
   
   .inner-circle {
@@ -12,16 +11,15 @@
       left: 2%;
       width: 96%;
       height: 96%;
-      background-color: yellow;
+      background-color: lightgray;
       border-radius: 50%;
-
   }
   
   .outer-circle {
       position: absolute;
       width: 400px;
       height: 400px;
-      background-color: gray;
+      background-color: lightgray;
       border-radius: 50%;
     
   }
@@ -39,7 +37,6 @@
     position: absolute;
     top: 0%;
     left:50%;
-    border: 1px solid black;
   }
   
   .visible-part-sec-hand{
@@ -93,7 +90,6 @@
       height: 4%;
       background: black;
       border-radius: 50%;
-      box-shadow: 3px 3px 5px #888888;
-      
+      box-shadow: 3px 3px 5px #888888;    
   }
 
