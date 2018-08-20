@@ -6,9 +6,9 @@ import './Clock.css';
 class Clock extends Component {
     state = {
         timer: setInterval(this.setHands.bind(this), 1000),
-        hourHandAngle:   -90,
-        minuteHandAngle: -90,
-        secondHandAngle: -90
+        hourHandAngle:   0, 
+        minuteHandAngle: 0,
+        secondHandAngle: 0
     }
 
     setHands() {
@@ -33,13 +33,13 @@ class Clock extends Component {
                         <MinuteScale/>
                         <HourScale/>
                         <div className="minute-hand" style={{transform : `rotate(${this.state.minuteHandAngle}deg)`}}>
-                        <div className="visible-part-min-hand"></div>
+                            <div className="visible-part-min-hand"></div>
                         </div>
                         <div className="hour-hand" style={{transform : `rotate(${this.state.hourHandAngle}deg)`}}>
-                        <div className="visible-part-hour-hand"></div>
+                            <div className="visible-part-hour-hand"></div>
                         </div>
                         <div className="second-hand" style={{transform : `rotate(${this.state.secondHandAngle}deg)`}}>
-                        <div className="visible-part-sec-hand"></div>
+                            <div className="visible-part-sec-hand"></div>
                         </div>
                         <div className="center-dot"></div>
                     </div>
