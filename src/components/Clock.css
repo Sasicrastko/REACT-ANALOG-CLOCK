@@ -12,7 +12,7 @@
       left: 2%;
       width: 96%;
       height: 96%;
-      background-color: white;
+      background-color: yellow;
       border-radius: 50%;
       border: 1px solid black;
   }
@@ -21,7 +21,7 @@
       position: absolute;
       width: 410px;
       height: 410px;
-      background-color: white;
+      background-color: gray;
       border-radius: 50%;
       border: 1px solid black;
   }
@@ -35,14 +35,14 @@
       border: 1px solid black;
   }
 
-  .visible{
+  .visible-part-min-hand, .visible-part-hour-hand, .visible-part-sec-hand{
     position: absolute;
     top: 0%;
     left:50%;
     border: 1px solid black;
   }
   
-  .sec{
+  .visible-part-sec-hand{
     background: red;
     width: 45%;
     height: 100%;
@@ -59,7 +59,7 @@
       border: 1px solid black;
   }
   
-  .min{
+  .visible-part-min-hand{
     background: black;
     width: 38%;
     height: 100%;
@@ -76,7 +76,7 @@
       border: 1px solid black;
   }
   
-  .hour{
+  .visible-part-hour-hand{
     background: black;
     width: 30%;
     height: 100%;
