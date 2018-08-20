@@ -1,22 +1,23 @@
 import React, { Component } from 'react';
+import './Clock.css';
 
 class Clock extends Component {
     state = {  }
     render() { 
         return (
-            <div id="container">
-                <div id="outer-circle">
-                    <div id="inner-circle">
-                        <div id="minute-hand">
-                        <div class="visible" id="min"></div>
+            <div className="container">
+                <div className="outer-circle">
+                    <div className="inner-circle">
+                        <div className="minute-hand">
+                        <div className="visible-min"></div>
                         </div>
-                        <div id="hour-hand">
-                        <div class="visible" id="hour"></div>
+                        <div className="hour-hand">
+                        <div className="visible-hour"></div>
                         </div>
-                        <div id="second-hand">
-                        <div class="visible" id="sec"></div>
+                        <div className="second-hand">
+                        <div className="visible-sec"></div>
                         </div>
-                        <div id="center-dot"></div>
+                        <div className="center-dot"></div>
                     </div>
                 </div>
           </div>
