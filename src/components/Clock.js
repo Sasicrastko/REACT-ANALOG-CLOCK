@@ -14,6 +14,10 @@ class Clock extends Component {
         secondHandAngle: 0
     }
 
+    componentWillMount(){
+        this.setHandAngles(); //this will do hands are set on correct position before the page is loaded
+    }
+
     setHandAngles(){
         const d = new Date();
         const sec = d.getSeconds();
