@@ -3,18 +3,35 @@ import './Clock.css';
 
 class Clock extends Component {
     state = {
-        timer: setInterval(this.setTime.bind(this), 1000),
-        hourHandAngle: 90,
-        minuteHandAngle: 30,
-        secondHandAngle: 180
+        timer: setInterval(this.setHands.bind(this), 1000),
+        hourHandAngle: -90,
+        minuteHandAngle: -90,
+        secondHandAngle: -90
     }
 
-    setTime() {
+    componentDidMount(){
+        this.createMinuteScale();
+    }
+
+    createMinuteScale(){
+        var innerCircle = document.getElementsByClassName("inner-circle")[0];
+        for(let i = 0; i<60; i++){
+            var diameter = document.createElement("div");
+            var M = document.createElement("div");
+            diameter.setAttribute("style", "position: absolute; top: 49.5%; left: 0%; width: 100%; height: 1%;");
+            M.setAttribute("style", "position:absolute;background-color: black; top: 0%; left:97%; width:3%; height:100%;");
+            diameter.style.transform = `rotate(${i*360/60}deg)`;
+            diameter.appendChild(M);
+            innerCircle.appendChild(diameter);
+          }
+    }
+
+    setHands() {
         const d = new Date();
         const sec = d.getSeconds();
         const min = d.getMinutes();
         const hour = d.getHours();
-        console.log(`${hour}:${min}:${sec}`);
+        //console.log(`${hour}:${min}:${sec}`);
 
         this.setState({
         	secondHandAngle:  (sec*360)/60-90, //-90 because CSS set hands horizontaly when angle is 0deg,
