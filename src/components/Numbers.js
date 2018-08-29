@@ -16,9 +16,6 @@ var romanNumbers = {
 }
 
 class  Numbers extends Component {
-    state = {
-        showRomanNumbers: false
-    }
     render() {
         var arr = []; //fill this array with 12 numbers
         var counter = 12;
@@ -30,8 +27,8 @@ class  Numbers extends Component {
                 {arr.map((H) =>{
                 return(
                     <div className="diameter" style={{transform : `rotate(${H*360/12-90}deg)`, position: `absolute`, top: `45%`, left: `0%`, width: `100%`, height: `10%`}}>
-                        <div className="N" style={{transform : `rotate(${-H*360/12+90}deg)`, position : `absolute`, backgroundColor: `transparent`, top: `0%`, left : `90%`, width : `10%`,  height : `100%`}}>
-                            <div className="number">{this.state.showRomanNumbers? romanNumbers[H] : H}</div>
+                        <div className="N" style={{transform : `rotate(${-H*360/12+90}deg)`, position : `absolute`, backgroundColor: `transparent`, top: `0%`, left : `85%`, width : `10%`,  height : `100%`}}>
+                            <div className="number">{this.props.showRomanNumbers? romanNumbers[H] : H}</div>
                         </div>
                     </div>
                 );

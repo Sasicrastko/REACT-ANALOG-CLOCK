@@ -12,7 +12,8 @@ class Clock extends Component {
         timer: setInterval(this.setHandAngles.bind(this), 1000),
         hourHandAngle:   0, 
         minuteHandAngle: 0,
-        secondHandAngle: 0
+        secondHandAngle: 0,
+        showRomanNumbers: false
     }
 
     componentWillMount(){
@@ -38,9 +39,9 @@ class Clock extends Component {
             <div className="container">
                 <div className="outer-circle">
                     <div className="inner-circle">
-                        {/*<MinuteScale/>
-                        <HourScale/>*/}
-                        <Numbers/>
+                        *<MinuteScale/>
+                        <HourScale/>
+                        <Numbers showRomanNumbers={this.state.showRomanNumbers}/>
                         <MinuteHand minuteHandAngle={this.state.minuteHandAngle}/>
                         <HourHand hourHandAngle={this.state.hourHandAngle}/>
                         <SecondHand secondHandAngle={this.state.secondHandAngle}/>
