@@ -16,9 +16,9 @@ class Clock extends Component {
         showRomanNumbers: false,
         showMinuteScale: true,
         showHourScale: true,
-        showNumbers: false,
-        width: 150,
-        numberSize: 200
+        showNumbers: true,
+        width: 350,
+        numberSize: 50
     }
 
     componentWillMount(){

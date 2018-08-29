@@ -25,10 +25,10 @@
 }
 .inner-circle3 {
     position: absolute;
-    top: 2%;
-    left: 2%;
-    width: 96%;
-    height: 96%;
+    top: 1%;
+    left: 1%;
+    width: 98%;
+    height: 98%;
     background-color: lightgray;
     border-radius: 50%;
 }
