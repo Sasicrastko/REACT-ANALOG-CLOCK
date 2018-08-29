@@ -13,7 +13,10 @@ class Clock extends Component {
         hourHandAngle:   0, 
         minuteHandAngle: 0,
         secondHandAngle: 0,
-        showRomanNumbers: false
+        showRomanNumbers: false,
+        showMinuteScale: false,
+        showHourScale: false,
+        showNumbers: true
     }
 
     componentWillMount(){
@@ -39,10 +42,10 @@ class Clock extends Component {
             <div className="container">
                 <div className="outer-circle">
                     <div className="inner-circle">
-                        *<MinuteScale/>
-                        <HourScale/>
-                        <Numbers showRomanNumbers={this.state.showRomanNumbers}/>
-                        <MinuteHand minuteHandAngle={this.state.minuteHandAngle}/>
+                        {this.state.showMinuteScale? <MinuteScale/> : null}
+                        { this.state.showHourScale? <HourScale/> : null}
+                        {this.state.showNumbers? <Numbers showRomanNumbers={this.state.showRomanNumbers}/> : null}
+                        {<MinuteHand minuteHandAngle={this.state.minuteHandAngle}/>}
                         <HourHand hourHandAngle={this.state.hourHandAngle}/>
                         <SecondHand secondHandAngle={this.state.secondHandAngle}/>
                         <div className="center-dot"></div>
