@@ -28,7 +28,7 @@ class  Numbers extends Component {
                 return(
                     <div className="diameter" style={{transform : `rotate(${H*360/12-90}deg)`, position: `absolute`, top: `45%`, left: `0%`, width: `100%`, height: `10%`}}>
                         <div className="N" style={{transform : `rotate(${-H*360/12+90}deg)`, position : `absolute`, backgroundColor: `transparent`, top: `0%`, left : `85%`, width : `10%`,  height : `100%`}}>
-                            <div className="number">{this.props.showRomanNumbers? romanNumbers[H] : H}</div>
+                            <div className="number" style={{fontSize : `${this.props.numberSize}%`}}>{this.props.showRomanNumbers? romanNumbers[H] : H}</div>
                         </div>
                     </div>
                 );
