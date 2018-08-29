@@ -13,16 +13,16 @@ class Clock extends Component {
         hourHandAngle:   0, 
         minuteHandAngle: 0,
         secondHandAngle: 0,
-        showRomanNumbers: true,
+        showRomanNumbers: false,
         showMinuteScale: true,
         showHourScale: true,
-        showNumbers: true,
-        width: 400,
+        showNumbers: false,
+        width: 150,
         numberSize: 200
     }
 
     componentWillMount(){
-        this.setHandAngles(); //this will do hands are set on correct position before the page is loaded
+        this.setHandAngles(); //this will set hands on accurate position before the page is loaded
     }
 
     setHandAngles(){
@@ -44,16 +44,20 @@ class Clock extends Component {
             <div className="container" style={{width: this.state.width, height: this.state.width}}>
                 <div className="outer-circle">
                     <div className="inner-circle">
-                        {this.state.showMinuteScale? <MinuteScale/> : null}
-                        {this.state.showHourScale? <HourScale/> : null}
-                        {this.state.showNumbers? <Numbers showRomanNumbers={this.state.showRomanNumbers} numberSize={this.state.numberSize}/> : null}
-                        {<MinuteHand minuteHandAngle={this.state.minuteHandAngle}/>}
-                        <HourHand hourHandAngle={this.state.hourHandAngle}/>
-                        <SecondHand secondHandAngle={this.state.secondHandAngle}/>
-                        <div className="center-dot"></div>
+                            <div className="inner-circle2">
+                                <div className="inner-circle3">
+                                    {this.state.showMinuteScale? <MinuteScale/> : null}
+                                    {this.state.showHourScale? <HourScale/> : null}
+                                    {this.state.showNumbers? <Numbers showRomanNumbers={this.state.showRomanNumbers} numberSize={this.state.numberSize}/> : null}
+                                    {<MinuteHand minuteHandAngle={this.state.minuteHandAngle}/>}
+                                    <HourHand hourHandAngle={this.state.hourHandAngle}/>
+                                    <SecondHand secondHandAngle={this.state.secondHandAngle}/>
+                                    <div className="center-dot"></div>
+                                </div>
+                            </div>
                     </div>
                 </div>
-          </div>
+            </div>
         );
     }
 }

@@ -13,6 +13,25 @@
       background-color: lightgray;
       border-radius: 50%;
   }
+
+  .inner-circle2 {
+    position: absolute;
+    top: 3%;
+    left: 3%;
+    width: 94%;
+    height: 94%;
+    background-color: black;
+    border-radius: 50%;
+}
+.inner-circle3 {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    width: 96%;
+    height: 96%;
+    background-color: lightgray;
+    border-radius: 50%;
+}
   
   .outer-circle {
       position: absolute;
