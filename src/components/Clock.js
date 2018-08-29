@@ -3,6 +3,7 @@ import MinuteScale from './MinuteScale';
 import HourScale from './HourScale';
 import MinuteHand from './MinuteHand';
 import HourHand from './HourHand';
+import Numbers from './Numbers';
 import SecondHand from './SecondHand';
 import './Clock.css';
 
@@ -37,8 +38,9 @@ class Clock extends Component {
             <div className="container">
                 <div className="outer-circle">
                     <div className="inner-circle">
-                        <MinuteScale/>
-                        <HourScale/>
+                        {/*<MinuteScale/>
+                        <HourScale/>*/}
+                        <Numbers/>
                         <MinuteHand minuteHandAngle={this.state.minuteHandAngle}/>
                         <HourHand hourHandAngle={this.state.hourHandAngle}/>
                         <SecondHand secondHandAngle={this.state.secondHandAngle}/>
