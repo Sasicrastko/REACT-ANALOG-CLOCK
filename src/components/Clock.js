@@ -16,7 +16,8 @@ class Clock extends Component {
         showRomanNumbers: false,
         showMinuteScale: false,
         showHourScale: false,
-        showNumbers: true
+        showNumbers: true,
+        width: 150
     }
 
     componentWillMount(){
@@ -39,7 +40,7 @@ class Clock extends Component {
 
     render() { 
         return (
-            <div className="container">
+            <div className="container" style={{width: this.state.width, height: this.state.width}}>
                 <div className="outer-circle">
                     <div className="inner-circle">
                         {this.state.showMinuteScale? <MinuteScale/> : null}
