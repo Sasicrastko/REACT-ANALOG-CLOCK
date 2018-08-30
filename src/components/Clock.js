@@ -24,6 +24,7 @@ class Clock extends Component {
         secondHandColor: `white`,
         innerCircleColor: `lightgray`,
         scaleBackgroundColor: 'yellow',
+        centerDotColor: `blue`,
         width: 150,
         numberSize: 100
     }
@@ -59,7 +60,7 @@ class Clock extends Component {
                                     {<MinuteHand minuteHandAngle={this.state.minuteHandAngle} color={this.state.minuteHandColor}/>}
                                     <HourHand hourHandAngle={this.state.hourHandAngle} color={this.state.hourHandColor}/>
                                     <SecondHand secondHandAngle={this.state.secondHandAngle} color={this.state.secondHandColor}/>
-                                    <div className="center-dot"></div>
+                                    <div className="center-dot" style={{backgroundColor: this.state.centerDotColor}}></div>
                                 </div>
                             </div>
                     </div>
