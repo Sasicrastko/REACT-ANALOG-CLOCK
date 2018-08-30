@@ -13,7 +13,7 @@ class  MinuteScale extends Component {
                 {arr.map((S) =>{
                 return(
                     <div className="diameter" style={{transform : `rotate(${S*360/60}deg)`, position : `absolute`, top : `49.5%`, left : '0%;', width : `100%`, height : `1%`}}>
-                        <div className="M" style={{position : `absolute`, backgroundColor: this.props.color, top: `0%`, left : `101%`,  width : `4%`, height : `100%`}}>
+                        <div className="M" style={{position : `absolute`, backgroundColor: this.props.color, top: `0%`, left : `101%`,  width : `3%`, height : `100%`}}>
                         </div>
                     </div>
                 );

@@ -18,15 +18,16 @@ class Clock extends Component {
         showHourScale: true,
         showNumbers: true,
         radialDirectionOfNumbers: false,
-        ColorOfRingsAndNumbers: `blue`,
+        showOuterRing: false,
+        showInnerRing: false,
+        colorOfScalesAndNumbers: `blue`,
         hourHandColor: `green`,
         minuteHandColor: `yellow`,
         secondHandColor: `white`,
-        innerCircleColor: `lightgray`,
-        scaleBackgroundColor: 'yellow',
+        innerCircleColor: `black`,
         centerDotColor: `blue`,
-        width: 150,
-        numberSize: 100
+        width: 500,
+        numberSize: 200
     }
 
     componentWillMount(){
@@ -47,16 +48,18 @@ class Clock extends Component {
         });
     }
 
-    render() { 
+    render() {
+        var colorOfOuterRing = this.state.showOuterRing? this.state.colorOfScalesAndNumbers : `transparent`; 
+        var colorOfInnerRing = this.state.showInnerRing? this.state.colorOfScalesAndNumbers : `transparent`; 
         return (
             <div className="container" style={{width: this.state.width, height: this.state.width}}>
-                <div className="outer-circle" style={{backgroundColor: `${this.state.ColorOfRingsAndNumbers}`}}>
-                    <div className="inner-circle" style={{backgroundColor: this.state.scaleBackgroundColor}}>
-                            <div className="inner-circle2" style={{backgroundColor: `${this.state.ColorOfRingsAndNumbers}`}}>
+                <div className="outer-circle" style={{backgroundColor: `${colorOfOuterRing}`}}>
+                    <div className="inner-circle" style={{backgroundColor: this.state.innerCircleColor}}>
+                            <div className="inner-circle2" style={{backgroundColor: `${colorOfInnerRing}`}}>
                                 <div className="inner-circle3" style={{backgroundColor: this.state.innerCircleColor}} >
-                                    {this.state.showMinuteScale? <MinuteScale color={this.state.ColorOfRingsAndNumbers}/> : null}
-                                    {this.state.showHourScale? <HourScale color={this.state.ColorOfRingsAndNumbers}/> : null}
-                                    {this.state.showNumbers? <Numbers showRomanNumbers={this.state.showRomanNumbers} numberSize={this.state.numberSize} radialDirectionOfNumbers={this.state.radialDirectionOfNumbers} color={this.state.ColorOfRingsAndNumbers}/> : null}
+                                    {this.state.showMinuteScale? <MinuteScale color={this.state.colorOfScalesAndNumbers}/> : null}
+                                    {this.state.showHourScale? <HourScale color={this.state.colorOfScalesAndNumbers}/> : null}
+                                    {this.state.showNumbers? <Numbers showRomanNumbers={this.state.showRomanNumbers} numberSize={this.state.numberSize} radialDirectionOfNumbers={this.state.radialDirectionOfNumbers} color={this.state.colorOfScalesAndNumbers}/> : null}
                                     {<MinuteHand minuteHandAngle={this.state.minuteHandAngle} color={this.state.minuteHandColor}/>}
                                     <HourHand hourHandAngle={this.state.hourHandAngle} color={this.state.hourHandColor}/>
                                     <SecondHand secondHandAngle={this.state.secondHandAngle} color={this.state.secondHandColor}/>
