@@ -61,7 +61,7 @@
     background: red;
     width: 45%;
     height: 100%;
-    box-shadow: 3px 3px 5px #888888;
+    /*box-shadow: 3px 3px 5px #888888;*/
     
   }
   
@@ -78,7 +78,7 @@
     background: black;
     width: 38%;
     height: 100%;
-    box-shadow: 3px 3px 5px #888888;
+    /*box-shadow: 3px 3px 5px #888888;*/
    
   }
   
@@ -95,7 +95,7 @@
     background: black;
     width: 30%;
     height: 100%;
-    box-shadow: 3px 3px 5px #888888;
+    /* box-shadow: 3px 3px 5px #888888;*/
   
   }
   
@@ -108,7 +108,7 @@
       height: 4%;
       background: black;
       border-radius: 50%;
-      box-shadow: 3px 3px 5px #888888;    
+      /*box-shadow: 3px 3px 5px #888888; */   
   }
 
   .number{

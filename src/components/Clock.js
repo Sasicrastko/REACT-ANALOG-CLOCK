@@ -22,6 +22,8 @@ class Clock extends Component {
         hourHandColor: `green`,
         minuteHandColor: `yellow`,
         secondHandColor: `white`,
+        innerCircleColor: `lightgray`,
+        scaleBackgroundColor: 'yellow',
         width: 150,
         numberSize: 100
     }
@@ -48,9 +50,9 @@ class Clock extends Component {
         return (
             <div className="container" style={{width: this.state.width, height: this.state.width}}>
                 <div className="outer-circle" style={{backgroundColor: `${this.state.ColorOfRingsAndNumbers}`}}>
-                    <div className="inner-circle">
+                    <div className="inner-circle" style={{backgroundColor: this.state.scaleBackgroundColor}}>
                             <div className="inner-circle2" style={{backgroundColor: `${this.state.ColorOfRingsAndNumbers}`}}>
-                                <div className="inner-circle3">
+                                <div className="inner-circle3" style={{backgroundColor: this.state.innerCircleColor}} >
                                     {this.state.showMinuteScale? <MinuteScale color={this.state.ColorOfRingsAndNumbers}/> : null}
                                     {this.state.showHourScale? <HourScale color={this.state.ColorOfRingsAndNumbers}/> : null}
                                     {this.state.showNumbers? <Numbers showRomanNumbers={this.state.showRomanNumbers} numberSize={this.state.numberSize} radialDirectionOfNumbers={this.state.radialDirectionOfNumbers} color={this.state.ColorOfRingsAndNumbers}/> : null}
