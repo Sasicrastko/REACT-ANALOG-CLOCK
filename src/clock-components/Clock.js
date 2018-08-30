@@ -26,8 +26,8 @@ class Clock extends Component {
         secondHandColor: `red`,
         innerCircleColor: `transparent`,
         centerDotColor: `#212131`,
-        width: 400,
-        numberSize: 180
+        width: 200,
+        numberSize: 80
     }
 
     componentWillMount(){
