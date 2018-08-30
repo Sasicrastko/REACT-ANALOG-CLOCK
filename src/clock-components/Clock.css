@@ -10,7 +10,6 @@
       left: 2%;
       width: 96%;
       height: 96%;
-      background-color: lightgray;
       border-radius: 50%;
       /*border: 1px solid black;*/
   }
@@ -21,7 +20,6 @@
     left: 3%;
     width: 94%;
     height: 94%;
-    background-color: black;
     border-radius: 50%;
 }
 .inner-circle3 {
@@ -30,7 +28,6 @@
     left: 1%;
     width: 98%;
     height: 98%;
-    background-color: lightgray;
     border-radius: 50%;
 }
   
@@ -38,7 +35,6 @@
       position: absolute;
       width: 100%;
       height: 100%;
-      background-color: black;
       border-radius: 50%;
     
   }
@@ -59,7 +55,6 @@
   }
   
   .visible-part-sec-hand{
-    background: red;
     width: 45%;
     height: 100%;
     /*box-shadow: 3px 3px 5px #888888;*/
@@ -76,7 +71,6 @@
   }
   
   .visible-part-min-hand{
-    background: black;
     width: 38%;
     height: 100%;
     /*box-shadow: 3px 3px 5px #888888;*/
@@ -93,7 +87,6 @@
   }
   
   .visible-part-hour-hand{
-    background: black;
     width: 30%;
     height: 100%;
     /* box-shadow: 3px 3px 5px #888888;*/
@@ -107,7 +100,6 @@
       left: 48%;
       width: 4%;
       height: 4%;
-      background: black;
       border-radius: 50%;
       /*box-shadow: 3px 3px 5px #888888; */   
   }
@@ -120,6 +112,5 @@
     align-items: center;
     justify-content: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: black
 }
 
