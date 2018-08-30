@@ -19,6 +19,9 @@ class Clock extends Component {
         showNumbers: true,
         radialDirectionOfNumbers: false,
         ColorOfRingsAndNumbers: `blue`,
+        hourHandColor: `green`,
+        minuteHandColor: `yellow`,
+        secondHandColor: `white`,
         width: 150,
         numberSize: 100
     }
@@ -51,9 +54,9 @@ class Clock extends Component {
                                     {this.state.showMinuteScale? <MinuteScale color={this.state.ColorOfRingsAndNumbers}/> : null}
                                     {this.state.showHourScale? <HourScale color={this.state.ColorOfRingsAndNumbers}/> : null}
                                     {this.state.showNumbers? <Numbers showRomanNumbers={this.state.showRomanNumbers} numberSize={this.state.numberSize} radialDirectionOfNumbers={this.state.radialDirectionOfNumbers} color={this.state.ColorOfRingsAndNumbers}/> : null}
-                                    {<MinuteHand minuteHandAngle={this.state.minuteHandAngle}/>}
-                                    <HourHand hourHandAngle={this.state.hourHandAngle}/>
-                                    <SecondHand secondHandAngle={this.state.secondHandAngle}/>
+                                    {<MinuteHand minuteHandAngle={this.state.minuteHandAngle} color={this.state.minuteHandColor}/>}
+                                    <HourHand hourHandAngle={this.state.hourHandAngle} color={this.state.hourHandColor}/>
+                                    <SecondHand secondHandAngle={this.state.secondHandAngle} color={this.state.secondHandColor}/>
                                     <div className="center-dot"></div>
                                 </div>
                             </div>
