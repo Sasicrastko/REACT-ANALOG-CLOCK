@@ -17,8 +17,10 @@ class Clock extends Component {
         showMinuteScale: true,
         showHourScale: true,
         showNumbers: true,
-        width: 350,
-        numberSize: 50
+        radialDirectionOfNumbers: false,
+        ColorOfRingsAndNumbers: `blue`,
+        width: 150,
+        numberSize: 100
     }
 
     componentWillMount(){
@@ -42,13 +44,13 @@ class Clock extends Component {
     render() { 
         return (
             <div className="container" style={{width: this.state.width, height: this.state.width}}>
-                <div className="outer-circle">
+                <div className="outer-circle" style={{backgroundColor: `${this.state.ColorOfRingsAndNumbers}`}}>
                     <div className="inner-circle">
-                            <div className="inner-circle2">
+                            <div className="inner-circle2" style={{backgroundColor: `${this.state.ColorOfRingsAndNumbers}`}}>
                                 <div className="inner-circle3">
-                                    {this.state.showMinuteScale? <MinuteScale/> : null}
-                                    {this.state.showHourScale? <HourScale/> : null}
-                                    {this.state.showNumbers? <Numbers showRomanNumbers={this.state.showRomanNumbers} numberSize={this.state.numberSize}/> : null}
+                                    {this.state.showMinuteScale? <MinuteScale color={this.state.ColorOfRingsAndNumbers}/> : null}
+                                    {this.state.showHourScale? <HourScale color={this.state.ColorOfRingsAndNumbers}/> : null}
+                                    {this.state.showNumbers? <Numbers showRomanNumbers={this.state.showRomanNumbers} numberSize={this.state.numberSize} radialDirectionOfNumbers={this.state.radialDirectionOfNumbers} color={this.state.ColorOfRingsAndNumbers}/> : null}
                                     {<MinuteHand minuteHandAngle={this.state.minuteHandAngle}/>}
                                     <HourHand hourHandAngle={this.state.hourHandAngle}/>
                                     <SecondHand secondHandAngle={this.state.secondHandAngle}/>

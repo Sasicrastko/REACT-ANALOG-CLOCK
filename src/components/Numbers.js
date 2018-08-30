@@ -25,10 +25,11 @@ class  Numbers extends Component {
         return(
             <div className="hour-scale">
                 {arr.map((H) =>{
+                var rotationAngleForNumberField = this.props.radialDirectionOfNumbers? `rotate(${90}deg)` : `rotate(${-H*360/12+90}deg)`
                 return(
                     <div className="diameter" style={{transform : `rotate(${H*360/12-90}deg)`, position: `absolute`, top: `45%`, left: `0%`, width: `100%`, height: `10%`}}>
-                        <div className="N" style={{transform : `rotate(${90}deg)`, position : `absolute`, backgroundColor: `transparent`, top: `0%`, left : `90%`, width : `10%`,  height : `100%`}}> {/*`rotate(${-H*360/12+90}deg)`*/}
-                            <div className="number" style={{fontSize : `${this.props.numberSize}%`}}>{this.props.showRomanNumbers? romanNumbers[H] : H}</div>
+                        <div className="N" style={{transform : rotationAngleForNumberField, position : `absolute`, backgroundColor: `transparent`, top: `0%`, left : `90%`, width : `10%`,  height : `100%`}}>
+                            <div className="number" style={{fontSize : `${this.props.numberSize}%`, color : this.props.color}}>{this.props.showRomanNumbers? romanNumbers[H] : H}</div>
                         </div>
                     </div>
                 );
