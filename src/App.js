@@ -33,6 +33,7 @@ class App extends Component {
         this.changeShowMinuteScale = this.changeShowMinuteScale.bind(this);
         this.changeShowHourScale = this.changeShowHourScale.bind(this); 
         this.changeRadialDirectionOfNumbers = this.changeRadialDirectionOfNumbers.bind(this);
+        this.changeShowOuterRing = this.changeShowOuterRing.bind(this);
 
 }
 
@@ -43,23 +44,26 @@ class App extends Component {
   }
 
   changeShowMinuteScale(){
-    //console.log("called CSMS")
     var characteristics = this.state.characteristics;
     characteristics.showMinuteScale = !this.state.characteristics.showMinuteScale;
     this.setState({characteristics : characteristics});
   }
 
   changeShowHourScale(){
-    //console.log("called CSHS")
     var characteristics = this.state.characteristics;
     characteristics.showHourScale = !this.state.characteristics.showHourScale;
     this.setState({characteristics : characteristics});
   }
 
   changeRadialDirectionOfNumbers(){
-    //console.log("called CSHS")
     var characteristics = this.state.characteristics;
     characteristics.radialDirectionOfNumbers = !this.state.characteristics.radialDirectionOfNumbers;
+    this.setState({characteristics : characteristics});
+  }
+
+  changeShowOuterRing(){
+    var characteristics = this.state.characteristics;
+    characteristics.showOuterRing = !this.state.characteristics.showOuterRing;
     this.setState({characteristics : characteristics});
   }
 
@@ -75,6 +79,7 @@ class App extends Component {
                       changeShowMinuteScale={this.changeShowMinuteScale}
                       changeShowHourScale={this.changeShowHourScale}
                       changeRadialDirectionOfNumbers={this.changeRadialDirectionOfNumbers}
+                      changeShowOuterRing={this.changeShowOuterRing}
         />
       </div>
     );

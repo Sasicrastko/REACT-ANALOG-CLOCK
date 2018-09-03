@@ -15,8 +15,8 @@ class ControlTable extends Component {
             <CheckBoxes func={this.props.changeShowHourScale} value={this.props.characteristics.showHourScale}/>
             <h6>Radial Direction Of Numbers?</h6>
             <CheckBoxes func={this.props.changeRadialDirectionOfNumbers} value={this.props.characteristics.radialDirectionOfNumbers}/>
-            <h6>E</h6>
-            <CheckBoxes/>
+            <h6>Outer Ringg Visible?</h6>
+            <CheckBoxes  func={this.props.changeShowOuterRing} value={this.props.characteristics.showOuterRing}/>
             <h6>F</h6>
             <CheckBoxes/>
 
