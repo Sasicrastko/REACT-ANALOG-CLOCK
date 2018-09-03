@@ -3,6 +3,18 @@ body{
     background: url(salvador_dali.jpg);
 }
 
+h1{
+    font-size: 50px;
+    text-shadow: 2px 2px rgba(55, 55, 55, .2);
+    color: rgba(255, 255, 255, .7); 
+}
+h5,h6{
+    text-shadow: 1px 1px rgba(55, 55, 55, .2);
+    color: rgba(255, 255, 255, .7); 
+    margin-left: 10px;
+}
+
+/*CSS FOR HEADER */
 .header{
     padding-top: 0px;
     height: 120px;
@@ -12,26 +24,50 @@ body{
     justify-content: center;
 }
 
+/*CSS FOR CONTROL TABLE */
 .control-table{
     position: absolute;
-    right: 3%;
+    left: 3%;
     margin-top: 50px;
     padding-top: 0px;
-    height: 320px;
+    height: 720px;
     width: 320px;
     background-color: rgba(155, 155, 155, .4);
     border: 2px solid white;
-    border-radius: 5%;
-    display: flex;
-    justify-content: center;
+    border-radius: 2%; 
 }
 
-h1{
-    font-size: 50px;
-    text-shadow: 2px 2px rgba(55, 55, 55, .2);
-    color: rgba(255, 255, 255, .7); 
+
+/*CSS FOR CHECKBOX */
+
+/* The container */
+.checkboxes{
+    margin-top: -20px;
+    margin-left: 10px;
 }
-h5{
-    text-shadow: 2px 2px rgba(55, 55, 55, .2);
+
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 12px;
     color: rgba(255, 255, 255, .7); 
+    text-shadow: 2px 2px rgba(55, 55, 55, .2);
 }
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 12px;
+    width: 12px;
+    background-color: rgba(255, 255, 255, .1);
+    border: 2px solid rgba(255, 255, 255); 
+    border-radius: 50%;
+}
+
+
+

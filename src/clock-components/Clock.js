@@ -13,21 +13,21 @@ class Clock extends Component {
         hourHandAngle:   0, 
         minuteHandAngle: 0,
         secondHandAngle: 0,
-        showRomanNumbers: true,
-        showMinuteScale: true,
-        showHourScale: true,
-        showNumbers: true,
-        radialDirectionOfNumbers: false,
-        showOuterRing: false,
-        showInnerRing: false,
-        colorOfScalesAndNumbers: `black`,
-        hourHandColor: `#151515`,
-        minuteHandColor: `black`,
-        secondHandColor: `red`,
-        innerCircleColor: `transparent`,
-        centerDotColor: `#212131`,
-        width: 200,
-        numberSize: 80
+        showRomanNumbers: this.props.characteristics.showRomanNumbers,
+        showMinuteScale: this.props.characteristics.showMinuteScale,
+        showHourScale: this.props.characteristics.showHourScale,
+        showNumbers: this.props.characteristics.showNumbers,
+        radialDirectionOfNumbers: this.props.characteristics.radialDirectionOfNumbers,
+        showOuterRing: this.props.characteristics.showOuterRing,
+        showInnerRing: this.props.characteristics.showInnerRing,
+        colorOfScalesAndNumbers: this.props.characteristics.colorOfScalesAndNumbers,
+        hourHandColor: this.props.characteristics.hourHandColor,
+        minuteHandColor: this.props.characteristics.minuteHandColor,
+        secondHandColor: this.props.characteristics.secondHandColor,
+        innerCircleColor: this.props.characteristics.innerCircleColor,
+        centerDotColor: this.props.characteristics.centerDotColor,
+        width: this.props.characteristics.width,
+        numberSize: this.props.characteristics.numberSize
     }
 
     componentWillMount(){
@@ -49,6 +49,7 @@ class Clock extends Component {
     }
 
     render() {
+        //console.log(this.state);
         var colorOfOuterRing = this.state.showOuterRing? this.state.colorOfScalesAndNumbers : `transparent`; 
         var colorOfInnerRing = this.state.showInnerRing? this.state.colorOfScalesAndNumbers : `transparent`; 
         return (
@@ -62,7 +63,7 @@ class Clock extends Component {
                                     {this.state.showHourScale? 
                                         <HourScale color={this.state.colorOfScalesAndNumbers}/> : null}
                                     {this.state.showNumbers? 
-                                        <Numbers showRomanNumbers={this.state.showRomanNumbers} numberSize={this.state.numberSize} radialDirectionOfNumbers={this.state.radialDirectionOfNumbers} color={this.state.colorOfScalesAndNumbers}/> : null}
+                                        <Numbers showRomanNumbers={this.props.characteristics.showRomanNumbers} numberSize={this.state.numberSize} radialDirectionOfNumbers={this.state.radialDirectionOfNumbers} color={this.state.colorOfScalesAndNumbers}/> : null}
                                         <MinuteHand minuteHandAngle={this.state.minuteHandAngle} color={this.state.minuteHandColor}/>
                                         <HourHand hourHandAngle={this.state.hourHandAngle} color={this.state.hourHandColor}/>
                                         <SecondHand secondHandAngle={this.state.secondHandAngle} color={this.state.secondHandColor}/>
