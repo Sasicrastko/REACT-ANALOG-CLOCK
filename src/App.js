@@ -30,11 +30,27 @@ class App extends Component {
           characteristics : defaultCharacteristics
         }
         this.changeShowRomanNumbers = this.changeShowRomanNumbers.bind(this);
+        this.changeShowMinuteScale = this.changeShowMinuteScale.bind(this);
+        this.changeShowHourScale = this.changeShowHourScale.bind(this);        
 }
 
   changeShowRomanNumbers(){
     var characteristics = this.state.characteristics;
     characteristics.showRomanNumbers = !this.state.characteristics.showRomanNumbers;
+    this.setState({characteristics : characteristics});
+  }
+
+  changeShowMinuteScale(){
+    console.log("called CSMS")
+    var characteristics = this.state.characteristics;
+    characteristics.showMinuteScale = !this.state.characteristics.showMinuteScale;
+    this.setState({characteristics : characteristics});
+  }
+
+  changeShowHourScale(){
+    console.log("called CSHS")
+    var characteristics = this.state.characteristics;
+    characteristics.showHourScale = !this.state.characteristics.showHourScale;
     this.setState({characteristics : characteristics});
   }
 
@@ -45,6 +61,8 @@ class App extends Component {
         <Clock characteristics={this.state.characteristics}/>
         <ControlTable characteristics={this.state.characteristics} 
                       changeShowRomanNumbers={this.changeShowRomanNumbers}
+                      changeShowMinuteScale={this.changeShowMinuteScale}
+                      changeShowHourScale={this.changeShowHourScale}
         />
       </div>
     );

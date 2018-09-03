@@ -17,10 +17,10 @@ class CheckBoxes extends Component {
     return (
       <div className="checkboxes">
             <label className="checkbox-container">True
-                <span className="checkmark" onClick={this.handleClick} style={this.props.value? {backgroundColor: `green`} : null}></span>
+                <span className="checkmark" onClick={!this.props.value? this.handleClick : null} style={this.props.value? {backgroundColor: `green`} : null}></span>
             </label>
             <label className="checkbox-container">False
-                <span className="checkmark" onClick={this.handleClick} style={!this.props.value? {backgroundColor: `green`} : null}></span>
+                <span className="checkmark" onClick={this.props.value? this.handleClick : null} style={!this.props.value? {backgroundColor: `green`} : null}></span>
             </label>
       </div>
     );

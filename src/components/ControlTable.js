@@ -7,12 +7,12 @@ class ControlTable extends Component {
   render() {
     return (
       <div className="control-table">
-            <h6>Roman Numbers</h6>
+            <h6>Roman Numbers?</h6>
             <CheckBoxes func={this.props.changeShowRomanNumbers} value={this.props.characteristics.showRomanNumbers}/>
-            <h6>B</h6>
-            <CheckBoxes/>
-            <h6>C</h6>
-            <CheckBoxes/>
+            <h6>Minut Scale Visible?</h6>
+            <CheckBoxes func={this.props.changeShowMinuteScale} value={this.props.characteristics.showMinuteScale}/>
+            <h6>Hour Sclale Visible?</h6>
+            <CheckBoxes func={this.props.changeShowHourScale} value={this.props.characteristics.showHourScale}/>
             <h6>D</h6>
             <CheckBoxes/>
             <h6>E</h6>
