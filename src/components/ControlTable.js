@@ -11,14 +11,14 @@ class ControlTable extends Component {
             <CheckBoxes func={this.props.changeShowRomanNumbers} value={this.props.characteristics.showRomanNumbers}/>
             <h6>Minut Scale Visible?</h6>
             <CheckBoxes func={this.props.changeShowMinuteScale} value={this.props.characteristics.showMinuteScale}/>
-            <h6>Hour Sclale Visible?</h6>
+            <h6>Hour Scale Visible?</h6>
             <CheckBoxes func={this.props.changeShowHourScale} value={this.props.characteristics.showHourScale}/>
             <h6>Radial Direction Of Numbers?</h6>
             <CheckBoxes func={this.props.changeRadialDirectionOfNumbers} value={this.props.characteristics.radialDirectionOfNumbers}/>
-            <h6>Outer Ringg Visible?</h6>
+            <h6>Outer Ring Visible?</h6>
             <CheckBoxes  func={this.props.changeShowOuterRing} value={this.props.characteristics.showOuterRing}/>
-            <h6>F</h6>
-            <CheckBoxes/>
+            <h6>Inner Ring Visible?</h6>
+            <CheckBoxes func={this.props.changeShowInnerRing} value={this.props.characteristics.showInnerRing}/>
 
       </div>
     );
