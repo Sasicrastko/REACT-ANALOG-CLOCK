@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import '../App.css';
 import CheckBoxes from './CheckBoxes';
+import Form from './Form';
+
 
 
 class ControlTable extends Component {
@@ -19,6 +21,8 @@ class ControlTable extends Component {
             <CheckBoxes  func={this.props.changeShowOuterRing} value={this.props.characteristics.showOuterRing}/>
             <h6>Inner Ring Visible?</h6>
             <CheckBoxes func={this.props.changeShowInnerRing} value={this.props.characteristics.showInnerRing}/>
+            <h6>Width</h6>
+            <Form func={this.props.changeWidth} value={this.props.characteristics.width}/>
 
       </div>
     );

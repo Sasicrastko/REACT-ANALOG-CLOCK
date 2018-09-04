@@ -35,6 +35,7 @@ class App extends Component {
         this.changeRadialDirectionOfNumbers = this.changeRadialDirectionOfNumbers.bind(this);
         this.changeShowOuterRing = this.changeShowOuterRing.bind(this);
         this.changeShowInnerRing = this.changeShowInnerRing.bind(this);
+        this.changeWidth = this.changeWidth.bind(this);
 
 }
 
@@ -74,9 +75,16 @@ class App extends Component {
     this.setState({characteristics : characteristics});
   }
 
+  changeWidth(width){
+    var characteristics = this.state.characteristics;
+    characteristics.width = width;
+    this.setState({characteristics : characteristics});
+  }
+
 
 
   render() {
+    console.log(this.state);
     return (
       <div className="App">
         <Header/>
@@ -88,6 +96,7 @@ class App extends Component {
                       changeRadialDirectionOfNumbers={this.changeRadialDirectionOfNumbers}
                       changeShowOuterRing={this.changeShowOuterRing}
                       changeShowInnerRing={this.changeShowInnerRing}
+                      changeWidth={this.changeWidth}
         />
       </div>
     );
