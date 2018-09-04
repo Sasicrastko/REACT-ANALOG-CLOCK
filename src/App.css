@@ -31,11 +31,24 @@ h5,h6{
     margin-top: 50px;
     padding-top: 0px;
     height: 720px;
-    width: 320px;
+    width: 384px;
     background-color: rgba(155, 155, 155, .4);
     border: 2px solid white;
     border-radius: 2%; 
 }
+
+.left-side{
+    width: 190px;
+    position: relative;
+    float: left;
+  }
+  
+  .right-side{
+    width: 190px;
+    position: relative;
+    float: right;
+  }
+  
 
 
 /*CSS FOR CHECKBOX */
