@@ -10,9 +10,9 @@ import './Clock.css';
 class Clock extends Component {
     state = {
         timer: setInterval(this.setHandAngles.bind(this), 1000),
-        hourHandAngle:   0, 
-        minuteHandAngle: 0,
-        secondHandAngle: 0,
+        //hourHandAngle:   0, 
+        //minuteHandAngle: 0,
+        //secondHandAngle: 0,
         showRomanNumbers: this.props.characteristics.showRomanNumbers,
         showMinuteScale: this.props.characteristics.showMinuteScale,
         showHourScale: this.props.characteristics.showHourScale,
@@ -39,8 +39,6 @@ class Clock extends Component {
         const sec = d.getSeconds();
         const min = d.getMinutes();
         const hour = d.getHours();
-        //console.log(`${hour}:${min}:${sec}`);
-
         this.setState({
         	secondHandAngle:  (sec*360)/60-90, //-90 because CSS set hands horizontaly when angle is 0deg,
         	minuteHandAngle: (min*360)/60-90,
@@ -62,8 +60,8 @@ class Clock extends Component {
                                         <MinuteScale color={this.state.colorOfScalesAndNumbers}/> : null}
                                     {this.props.characteristics.showHourScale? 
                                         <HourScale color={this.state.colorOfScalesAndNumbers}/> : null}
-                                    {this.state.showNumbers? 
-                                        <Numbers showRomanNumbers={this.props.characteristics.showRomanNumbers} numberSize={this.state.numberSize} radialDirectionOfNumbers={this.props.characteristics.radialDirectionOfNumbers} color={this.state.colorOfScalesAndNumbers}/> : null}
+                                    {this.props.characteristics.showNumbers? 
+                                        <Numbers showRomanNumbers={this.props.characteristics.showRomanNumbers} numberSize={this.props.characteristics.numberSize} radialDirectionOfNumbers={this.props.characteristics.radialDirectionOfNumbers} color={this.state.colorOfScalesAndNumbers}/> : null}
                                         <MinuteHand minuteHandAngle={this.state.minuteHandAngle} color={this.state.minuteHandColor}/>
                                         <HourHand hourHandAngle={this.state.hourHandAngle} color={this.state.hourHandColor}/>
                                         <SecondHand secondHandAngle={this.state.secondHandAngle} color={this.state.secondHandColor}/>

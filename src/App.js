@@ -19,7 +19,7 @@ const defaultCharacteristics = {
     innerCircleColor: `white`,
     centerDotColor: `#212131`,
     width: 400,
-    numberSize: 180
+    numberSize: 280
 }
 
 
@@ -33,9 +33,11 @@ class App extends Component {
         this.changeShowMinuteScale = this.changeShowMinuteScale.bind(this);
         this.changeShowHourScale = this.changeShowHourScale.bind(this); 
         this.changeRadialDirectionOfNumbers = this.changeRadialDirectionOfNumbers.bind(this);
+        this.changeShowNumbers = this.changeShowNumbers.bind(this);
         this.changeShowOuterRing = this.changeShowOuterRing.bind(this);
         this.changeShowInnerRing = this.changeShowInnerRing.bind(this);
         this.changeWidth = this.changeWidth.bind(this);
+        this.changeNumberSize = this.changeNumberSize.bind(this);
 
 }
 
@@ -54,6 +56,12 @@ class App extends Component {
   changeShowHourScale(){
     var characteristics = this.state.characteristics;
     characteristics.showHourScale = !this.state.characteristics.showHourScale;
+    this.setState({characteristics : characteristics});
+  }
+
+  changeShowNumbers(){
+    var characteristics = this.state.characteristics;
+    characteristics.showNumbers = !this.state.characteristics.showNumbers;
     this.setState({characteristics : characteristics});
   }
 
@@ -81,6 +89,12 @@ class App extends Component {
     this.setState({characteristics : characteristics});
   }
 
+  changeNumberSize(size){
+    var characteristics = this.state.characteristics;
+    characteristics.numberSize = size;
+    this.setState({characteristics : characteristics});
+  }
+
 
 
   render() {
@@ -94,9 +108,11 @@ class App extends Component {
                       changeShowMinuteScale={this.changeShowMinuteScale}
                       changeShowHourScale={this.changeShowHourScale}
                       changeRadialDirectionOfNumbers={this.changeRadialDirectionOfNumbers}
+                      changeShowNumbers={this.changeShowNumbers}
                       changeShowOuterRing={this.changeShowOuterRing}
                       changeShowInnerRing={this.changeShowInnerRing}
                       changeWidth={this.changeWidth}
+                      changeNumberSize={this.changeNumberSize}
         />
       </div>
     );
