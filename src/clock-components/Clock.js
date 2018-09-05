@@ -64,7 +64,7 @@ class Clock extends Component {
                                         <Numbers showRomanNumbers={this.props.characteristics.showRomanNumbers} numberSize={this.props.characteristics.numberSize} radialDirectionOfNumbers={this.props.characteristics.radialDirectionOfNumbers} color={this.props.characteristics.colorOfScalesAndNumbers}/> : null}
                                         <MinuteHand minuteHandAngle={this.state.minuteHandAngle} color={this.props.characteristics.minuteHandColor}/>
                                         <HourHand hourHandAngle={this.state.hourHandAngle} color={this.props.characteristics.hourHandColor}/>
-                                        <SecondHand secondHandAngle={this.state.secondHandAngle} color={this.state.secondHandColor}/>
+                                        <SecondHand secondHandAngle={this.state.secondHandAngle} color={this.props.characteristics.secondHandColor}/>
                                         <div className="center-dot" style={{backgroundColor: this.state.centerDotColor}}></div>
                                 </div>
                             </div>
