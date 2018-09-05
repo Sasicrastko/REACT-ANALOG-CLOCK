@@ -40,6 +40,7 @@ class App extends Component {
         this.changeNumberSize = this.changeNumberSize.bind(this);
         this.changeColorOfScalesAndNumbers = this.changeColorOfScalesAndNumbers.bind(this);
         this.changeHourHandColor = this.changeHourHandColor.bind(this);
+        this.changeMinuteHandColor = this.changeMinuteHandColor.bind(this);
 
 }
 
@@ -109,6 +110,12 @@ class App extends Component {
     this.setState({characteristics : characteristics});
   }
 
+  changeMinuteHandColor(color){
+    var characteristics = this.state.characteristics;
+    characteristics.minuteHandColor = color;
+    this.setState({characteristics : characteristics});
+  }
+
 
 
   render() {
@@ -129,6 +136,7 @@ class App extends Component {
                       changeNumberSize={this.changeNumberSize}
                       changeColorOfScalesAndNumbers={this.changeColorOfScalesAndNumbers}
                       changeHourHandColor={this.changeHourHandColor}
+                      changeMinuteHandColor={this.changeMinuteHandColor}
         />
       </div>
     );
