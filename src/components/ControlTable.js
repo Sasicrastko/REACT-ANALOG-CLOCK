@@ -32,6 +32,8 @@ class ControlTable extends Component {
                   <Form func={this.props.changeNumberSize} value={this.props.characteristics.numberSize}/>
                   <h6>Color Of Scales And Numbers</h6>
                   <Form func={this.props.changeColorOfScalesAndNumbers} value={this.props.characteristics.colorOfScalesAndNumbers}/>
+                  <h6>Color Of Hour Hand</h6>
+                  <Form func={this.props.changeHourHandColor} value={this.props.characteristics.hourHandColor}/>
             </div>
       </div>
     );
