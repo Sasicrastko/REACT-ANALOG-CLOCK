@@ -30,6 +30,8 @@ class ControlTable extends Component {
                   <Form func={this.props.changeWidth} value={this.props.characteristics.width}/>
                   <h6>Number Size</h6>
                   <Form func={this.props.changeNumberSize} value={this.props.characteristics.numberSize}/>
+                  <h6>Color Of Scales And Numbers</h6>
+                  <Form func={this.props.changeColorOfScalesAndNumbers} value={this.props.characteristics.colorOfScalesAndNumbers}/>
             </div>
       </div>
     );

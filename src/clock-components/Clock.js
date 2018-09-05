@@ -57,11 +57,11 @@ class Clock extends Component {
                             <div className="inner-circle2" style={{backgroundColor: `${colorOfInnerRing}`}}>
                                 <div className="inner-circle3" style={{backgroundColor: this.state.innerCircleColor}} >
                                     {this.props.characteristics.showMinuteScale?
-                                        <MinuteScale color={this.state.colorOfScalesAndNumbers}/> : null}
+                                        <MinuteScale color={this.props.characteristics.colorOfScalesAndNumbers}/> : null}
                                     {this.props.characteristics.showHourScale? 
-                                        <HourScale color={this.state.colorOfScalesAndNumbers}/> : null}
+                                        <HourScale color={this.props.characteristics.colorOfScalesAndNumbers}/> : null}
                                     {this.props.characteristics.showNumbers? 
-                                        <Numbers showRomanNumbers={this.props.characteristics.showRomanNumbers} numberSize={this.props.characteristics.numberSize} radialDirectionOfNumbers={this.props.characteristics.radialDirectionOfNumbers} color={this.state.colorOfScalesAndNumbers}/> : null}
+                                        <Numbers showRomanNumbers={this.props.characteristics.showRomanNumbers} numberSize={this.props.characteristics.numberSize} radialDirectionOfNumbers={this.props.characteristics.radialDirectionOfNumbers} color={this.props.characteristics.colorOfScalesAndNumbers}/> : null}
                                         <MinuteHand minuteHandAngle={this.state.minuteHandAngle} color={this.state.minuteHandColor}/>
                                         <HourHand hourHandAngle={this.state.hourHandAngle} color={this.state.hourHandColor}/>
                                         <SecondHand secondHandAngle={this.state.secondHandAngle} color={this.state.secondHandColor}/>

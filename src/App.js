@@ -38,6 +38,7 @@ class App extends Component {
         this.changeShowInnerRing = this.changeShowInnerRing.bind(this);
         this.changeWidth = this.changeWidth.bind(this);
         this.changeNumberSize = this.changeNumberSize.bind(this);
+        this.changeColorOfScalesAndNumbers = this.changeColorOfScalesAndNumbers.bind(this);
 
 }
 
@@ -95,6 +96,12 @@ class App extends Component {
     this.setState({characteristics : characteristics});
   }
 
+  changeColorOfScalesAndNumbers(color){
+    var characteristics = this.state.characteristics;
+    characteristics.colorOfScalesAndNumbers = color;
+    this.setState({characteristics : characteristics});
+  }
+
 
 
   render() {
@@ -113,6 +120,7 @@ class App extends Component {
                       changeShowInnerRing={this.changeShowInnerRing}
                       changeWidth={this.changeWidth}
                       changeNumberSize={this.changeNumberSize}
+                      changeColorOfScalesAndNumbers={this.changeColorOfScalesAndNumbers}
         />
       </div>
     );
