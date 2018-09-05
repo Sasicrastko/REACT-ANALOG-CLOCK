@@ -42,6 +42,8 @@ class App extends Component {
         this.changeHourHandColor = this.changeHourHandColor.bind(this);
         this.changeMinuteHandColor = this.changeMinuteHandColor.bind(this);
         this.changeSecondHandColor = this.changeSecondHandColor.bind(this);
+        this.changeInnerCircleColor = this.changeInnerCircleColor.bind(this);
+        this.changeCenterDotColor = this.changeCenterDotColor.bind(this);
 
 }
 
@@ -123,6 +125,20 @@ class App extends Component {
     this.setState({characteristics : characteristics});
   }
 
+  changeInnerCircleColor(color){
+    var characteristics = this.state.characteristics;
+    characteristics.innerCircleColor = color;
+    this.setState({characteristics : characteristics});
+  }
+
+  changeCenterDotColor(color){
+    var characteristics = this.state.characteristics;
+    characteristics.centerDotColor = color;
+    this.setState({characteristics : characteristics});
+  }
+
+ 
+
 
 
   render() {
@@ -145,6 +161,9 @@ class App extends Component {
                       changeHourHandColor={this.changeHourHandColor}
                       changeMinuteHandColor={this.changeMinuteHandColor}
                       changeSecondHandColor={this.changeSecondHandColor}
+                      changeInnerCircleColor={this.changeInnerCircleColor}
+                      changeCenterDotColor={this.changeCenterDotColor}
+
         />
       </div>
     );

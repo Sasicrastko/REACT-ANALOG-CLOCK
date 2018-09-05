@@ -10,9 +10,9 @@ import './Clock.css';
 class Clock extends Component {
     state = {
         timer: setInterval(this.setHandAngles.bind(this), 1000),
-        //hourHandAngle:   0, 
-        //minuteHandAngle: 0,
-        //secondHandAngle: 0,
+        /*hourHandAngle:   0, 
+        minuteHandAngle: 0,
+        secondHandAngle: 0,
         showRomanNumbers: this.props.characteristics.showRomanNumbers,
         showMinuteScale: this.props.characteristics.showMinuteScale,
         showHourScale: this.props.characteristics.showHourScale,
@@ -27,7 +27,7 @@ class Clock extends Component {
         innerCircleColor: this.props.characteristics.innerCircleColor,
         centerDotColor: this.props.characteristics.centerDotColor,
         width: this.props.characteristics.width,
-        numberSize: this.props.characteristics.numberSize
+        numberSize: this.props.characteristics.numberSize */
     }
 
     componentWillMount(){
@@ -53,9 +53,9 @@ class Clock extends Component {
         return (
             <div className="container" style={{width: Number(this.props.characteristics.width), height: Number(this.props.characteristics.width)}}>
                 <div className="outer-circle" style={{backgroundColor: `${colorOfOuterRing}`}}>
-                    <div className="inner-circle" style={{backgroundColor: this.state.innerCircleColor}}>
+                    <div className="inner-circle" style={{backgroundColor: this.props.characteristics.innerCircleColor}}>
                             <div className="inner-circle2" style={{backgroundColor: `${colorOfInnerRing}`}}>
-                                <div className="inner-circle3" style={{backgroundColor: this.state.innerCircleColor}} >
+                                <div className="inner-circle3" style={{backgroundColor: this.props.characteristics.innerCircleColor}} >
                                     {this.props.characteristics.showMinuteScale?
                                         <MinuteScale color={this.props.characteristics.colorOfScalesAndNumbers}/> : null}
                                     {this.props.characteristics.showHourScale? 
@@ -65,7 +65,7 @@ class Clock extends Component {
                                         <MinuteHand minuteHandAngle={this.state.minuteHandAngle} color={this.props.characteristics.minuteHandColor}/>
                                         <HourHand hourHandAngle={this.state.hourHandAngle} color={this.props.characteristics.hourHandColor}/>
                                         <SecondHand secondHandAngle={this.state.secondHandAngle} color={this.props.characteristics.secondHandColor}/>
-                                        <div className="center-dot" style={{backgroundColor: this.state.centerDotColor}}></div>
+                                        <div className="center-dot" style={{backgroundColor: this.props.characteristics.centerDotColor}}></div>
                                 </div>
                             </div>
                     </div>
