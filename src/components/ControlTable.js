@@ -3,8 +3,6 @@ import '../App.css';
 import CheckBoxes from './CheckBoxes';
 import Form from './Form';
 
-
-
 class ControlTable extends Component {
   render() {
     return (

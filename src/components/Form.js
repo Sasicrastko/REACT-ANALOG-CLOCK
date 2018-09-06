@@ -24,13 +24,11 @@ class Form extends Component {
       return (
         <form onSubmit={this.handleSubmit}>
           <label>
-            <input type="text" value={this.state.value} onChange={this.handleChange} />
+            <input type="text" value={this.state.value} onChange={this.handleChange} placeholder={this.state.value}/>
           </label>
-          <input type="submit" value="Submit" />
         </form>
       );
     }
   }
 
   export default Form;
-  
