@@ -1,13 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class  HourHand extends Component {
-    render() {
+const  HourHand = (props) =>  {
         return(
-            <div className="hour-hand" style={{transform : `rotate(${this.props.hourHandAngle}deg)`}}>
-                <div className="visible-part-hour-hand" style={{background: this.props.color}}></div>
+            <div className="hour-hand" style={{transform : `rotate(${props.hourHandAngle}deg)`}}>
+                <div className="visible-part-hour-hand" style={{background: props.color}}></div>
             </div>
         )
-    }
 }
  
 export default HourHand;

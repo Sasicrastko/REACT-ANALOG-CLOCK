@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React  from 'react';
 
-var romanNumbers = {
+const romanNumbers = {
     1 : 'I',
     2 : 'II',
     3 : 'III',
@@ -15,21 +15,20 @@ var romanNumbers = {
     12 : 'XII'
 }
 
-class  Numbers extends Component {
-    render() {
-        var arr = []; //fill this array with 12 numbers
-        var counter = 12;
+const  Numbers = (props) => {
+        let arr = []; //fill this array with 12 numbers
+        let counter = 12;
         while(counter--){
-            arr[counter] = counter+1;
+            arr[counter] = counter + 1;
         }
         return(
             <div className="hour-scale">
                 {arr.map((H) =>{
-                var rotationAngleForNumberField = this.props.radialDirectionOfNumbers? `rotate(${90}deg)` : `rotate(${-H*360/12+90}deg)`
+                let rotationAngleForNumberField = props.radialDirectionOfNumbers? `rotate(${90}deg)` : `rotate(${-H*360/12+90}deg)`
                 return(
                     <div className="diameter" style={{transform : `rotate(${H*360/12-90}deg)`, position: `absolute`, top: `45%`, left: `0%`, width: `100%`, height: `10%`}}>
                         <div className="N" style={{transform : rotationAngleForNumberField, position : `absolute`, backgroundColor: `transparent`, top: `0%`, left : `90%`, width : `10%`,  height : `100%`}}>
-                            <div className="number" style={{fontSize : `${this.props.numberSize}%`, color : this.props.color}}>{this.props.showRomanNumbers? romanNumbers[H] : H}</div>
+                            <div className="number" style={{fontSize : `${props.numberSize}%`, color : props.color}}>{props.showRomanNumbers? romanNumbers[H] : H}</div>
                         </div>
                     </div>
                 );
@@ -37,7 +36,6 @@ class  Numbers extends Component {
             )}
             </div>
         );
-    }
 }
  
 export default Numbers;

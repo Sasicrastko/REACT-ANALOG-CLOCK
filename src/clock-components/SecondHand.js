@@ -1,13 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class  SecondHand extends Component {
-    render() {
+const  SecondHand = (props) => {
         return(
-            <div className="second-hand" style={{transform : `rotate(${this.props.secondHandAngle}deg)`}}>
-                <div className="visible-part-sec-hand" style={{background: this.props.color}}></div>
+            <div className="second-hand" style={{transform : `rotate(${props.secondHandAngle}deg)`}}>
+                <div className="visible-part-sec-hand" style={{background: props.color}}></div>
             </div>
         )
-    }
 }
  
 export default SecondHand;

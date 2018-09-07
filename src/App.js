@@ -24,130 +24,113 @@ const defaultCharacteristics = {
 
 
 class App extends Component {
+
   constructor(props){
     super(props);
         this.state = {
           characteristics : defaultCharacteristics
         }
-        this.changeShowRomanNumbers = this.changeShowRomanNumbers.bind(this);
-        this.changeShowMinuteScale = this.changeShowMinuteScale.bind(this);
-        this.changeShowHourScale = this.changeShowHourScale.bind(this); 
-        this.changeRadialDirectionOfNumbers = this.changeRadialDirectionOfNumbers.bind(this);
-        this.changeShowNumbers = this.changeShowNumbers.bind(this);
-        this.changeShowOuterRing = this.changeShowOuterRing.bind(this);
-        this.changeShowInnerRing = this.changeShowInnerRing.bind(this);
-        this.changeWidth = this.changeWidth.bind(this);
-        this.changeNumberSize = this.changeNumberSize.bind(this);
-        this.changeColorOfScalesAndNumbers = this.changeColorOfScalesAndNumbers.bind(this);
-        this.changeHourHandColor = this.changeHourHandColor.bind(this);
-        this.changeMinuteHandColor = this.changeMinuteHandColor.bind(this);
-        this.changeSecondHandColor = this.changeSecondHandColor.bind(this);
-        this.changeInnerCircleColor = this.changeInnerCircleColor.bind(this);
-        this.changeCenterDotColor = this.changeCenterDotColor.bind(this);
-
 }
 
-  changeShowRomanNumbers(){
+  changeShowRomanNumbers = ()=> {
     var characteristics = this.state.characteristics;
     characteristics.showRomanNumbers = !this.state.characteristics.showRomanNumbers;
     this.setState({characteristics : characteristics});
   }
 
-  changeShowMinuteScale(){
+  changeShowMinuteScale = () => {
     var characteristics = this.state.characteristics;
     characteristics.showMinuteScale = !this.state.characteristics.showMinuteScale;
     this.setState({characteristics : characteristics});
   }
 
-  changeShowHourScale(){
+  changeShowHourScale = () => {
     var characteristics = this.state.characteristics;
     characteristics.showHourScale = !this.state.characteristics.showHourScale;
     this.setState({characteristics : characteristics});
   }
 
-  changeShowNumbers(){
+  changeShowNumbers = () => {
     var characteristics = this.state.characteristics;
     characteristics.showNumbers = !this.state.characteristics.showNumbers;
     this.setState({characteristics : characteristics});
   }
 
-  changeRadialDirectionOfNumbers(){
+  changeRadialDirectionOfNumbers = () => {
     var characteristics = this.state.characteristics;
     characteristics.radialDirectionOfNumbers = !this.state.characteristics.radialDirectionOfNumbers;
     this.setState({characteristics : characteristics});
   }
 
-  changeShowOuterRing(){
+  changeShowOuterRing = () => {
     var characteristics = this.state.characteristics;
     characteristics.showOuterRing = !this.state.characteristics.showOuterRing;
     this.setState({characteristics : characteristics});
   }
 
-  changeShowInnerRing(){
+  changeShowInnerRing = () => {
     var characteristics = this.state.characteristics;
     characteristics.showInnerRing = !this.state.characteristics.showInnerRing;
     this.setState({characteristics : characteristics});
   }
 
-  changeWidth(width){
+  changeWidth = (width) => {
     var characteristics = this.state.characteristics;
     characteristics.width = width;
     this.setState({characteristics : characteristics});
   }
 
-  changeNumberSize(size){
+  changeNumberSize = (size) => {
     var characteristics = this.state.characteristics;
     characteristics.numberSize = size;
     this.setState({characteristics : characteristics});
   }
 
-  changeColorOfScalesAndNumbers(color){
+  changeColorOfScalesAndNumbers = (color) => {
     var characteristics = this.state.characteristics;
     characteristics.colorOfScalesAndNumbers = color;
     this.setState({characteristics : characteristics});
   }
 
-  changeHourHandColor(color){
+  changeHourHandColor = (color) => {
     var characteristics = this.state.characteristics;
     characteristics.hourHandColor = color;
     this.setState({characteristics : characteristics});
   }
 
-  changeMinuteHandColor(color){
+  changeMinuteHandColor = (color) => {
     var characteristics = this.state.characteristics;
     characteristics.minuteHandColor = color;
     this.setState({characteristics : characteristics});
   }
 
-  changeSecondHandColor(color){
+  changeSecondHandColor = (color) => {
     var characteristics = this.state.characteristics;
     characteristics.secondHandColor = color;
     this.setState({characteristics : characteristics});
   }
 
-  changeInnerCircleColor(color){
+  changeInnerCircleColor = (color) => {
     var characteristics = this.state.characteristics;
     characteristics.innerCircleColor = color;
     this.setState({characteristics : characteristics});
   }
 
-  changeCenterDotColor(color){
+  changeCenterDotColor = (color) => {
     var characteristics = this.state.characteristics;
     characteristics.centerDotColor = color;
     this.setState({characteristics : characteristics});
   }
 
- 
-
-
 
   render() {
-    console.log(this.state);
+    //console.log(this.state);
     return (
       <div className="App">
         <Header/>
         <Clock characteristics={this.state.characteristics}/>
-        <ControlTable characteristics={this.state.characteristics} 
+        <ControlTable 
+                      characteristics={this.state.characteristics} 
                       changeShowRomanNumbers={this.changeShowRomanNumbers}
                       changeShowMinuteScale={this.changeShowMinuteScale}
                       changeShowHourScale={this.changeShowHourScale}
