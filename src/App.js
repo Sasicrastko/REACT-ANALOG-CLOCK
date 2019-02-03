@@ -18,8 +18,10 @@ const defaultCharacteristics = {
     secondHandColor: `red`,
     innerCircleColor: `white`,
     centerDotColor: `#212131`,
-    width: 400,
-    numberSize: 280
+    width: 500,
+    numberSize: 280,
+    iana: ''
+
 }
 
 
@@ -33,92 +35,98 @@ class App extends Component {
 }
 
   changeShowRomanNumbers = ()=> {
-    var characteristics = this.state.characteristics;
+    let characteristics = this.state.characteristics;
     characteristics.showRomanNumbers = !this.state.characteristics.showRomanNumbers;
     this.setState({characteristics : characteristics});
   }
 
   changeShowMinuteScale = () => {
-    var characteristics = this.state.characteristics;
+    let characteristics = this.state.characteristics;
     characteristics.showMinuteScale = !this.state.characteristics.showMinuteScale;
     this.setState({characteristics : characteristics});
   }
 
   changeShowHourScale = () => {
-    var characteristics = this.state.characteristics;
+    let characteristics = this.state.characteristics;
     characteristics.showHourScale = !this.state.characteristics.showHourScale;
     this.setState({characteristics : characteristics});
   }
 
   changeShowNumbers = () => {
-    var characteristics = this.state.characteristics;
+    let characteristics = this.state.characteristics;
     characteristics.showNumbers = !this.state.characteristics.showNumbers;
     this.setState({characteristics : characteristics});
   }
 
   changeRadialDirectionOfNumbers = () => {
-    var characteristics = this.state.characteristics;
+    let characteristics = this.state.characteristics;
     characteristics.radialDirectionOfNumbers = !this.state.characteristics.radialDirectionOfNumbers;
     this.setState({characteristics : characteristics});
   }
 
   changeShowOuterRing = () => {
-    var characteristics = this.state.characteristics;
+    let characteristics = this.state.characteristics;
     characteristics.showOuterRing = !this.state.characteristics.showOuterRing;
     this.setState({characteristics : characteristics});
   }
 
   changeShowInnerRing = () => {
-    var characteristics = this.state.characteristics;
+    let characteristics = this.state.characteristics;
     characteristics.showInnerRing = !this.state.characteristics.showInnerRing;
     this.setState({characteristics : characteristics});
   }
 
   changeWidth = (width) => {
-    var characteristics = this.state.characteristics;
+    let characteristics = this.state.characteristics;
     characteristics.width = width;
     this.setState({characteristics : characteristics});
   }
 
   changeNumberSize = (size) => {
-    var characteristics = this.state.characteristics;
+    let characteristics = this.state.characteristics;
     characteristics.numberSize = size;
     this.setState({characteristics : characteristics});
   }
 
   changeColorOfScalesAndNumbers = (color) => {
-    var characteristics = this.state.characteristics;
+    let characteristics = this.state.characteristics;
     characteristics.colorOfScalesAndNumbers = color;
     this.setState({characteristics : characteristics});
   }
 
   changeHourHandColor = (color) => {
-    var characteristics = this.state.characteristics;
+    let characteristics = this.state.characteristics;
     characteristics.hourHandColor = color;
     this.setState({characteristics : characteristics});
   }
 
   changeMinuteHandColor = (color) => {
-    var characteristics = this.state.characteristics;
+    let characteristics = this.state.characteristics;
     characteristics.minuteHandColor = color;
     this.setState({characteristics : characteristics});
   }
 
   changeSecondHandColor = (color) => {
-    var characteristics = this.state.characteristics;
+    let characteristics = this.state.characteristics;
     characteristics.secondHandColor = color;
     this.setState({characteristics : characteristics});
   }
 
   changeInnerCircleColor = (color) => {
-    var characteristics = this.state.characteristics;
+    let characteristics = this.state.characteristics;
     characteristics.innerCircleColor = color;
     this.setState({characteristics : characteristics});
   }
 
   changeCenterDotColor = (color) => {
-    var characteristics = this.state.characteristics;
+    let characteristics = this.state.characteristics;
     characteristics.centerDotColor = color;
+    this.setState({characteristics : characteristics});
+  }
+
+  changeTimeZone = (iana) => {
+    let characteristics = this.state.characteristics;
+    characteristics.iana = iana;
     this.setState({characteristics : characteristics});
   }
 
@@ -146,6 +154,7 @@ class App extends Component {
                       changeSecondHandColor={this.changeSecondHandColor}
                       changeInnerCircleColor={this.changeInnerCircleColor}
                       changeCenterDotColor={this.changeCenterDotColor}
+                      changeTimeZone={this.changeTimeZone}
 
         />
       </div>

@@ -17,7 +17,9 @@ class Clock extends Component {
     }
 
     setHandAngles(){
-        const d = new Date();
+        const date = new Date();
+        const d = this.props.characteristics.iana ? this.changeTimezone(date, this.props.characteristics.iana) : date;
+
         const sec = d.getSeconds();
         const min = d.getMinutes();
         const hour = d.getHours();
@@ -28,9 +30,21 @@ class Clock extends Component {
         });
     }
 
+    //the browsers cannot read IANA timezones when creating a date,
+    //nor have  methods to change the timezones on  existing Date object
+    //so we need a method changeTimezone to handle that
+
+   changeTimezone(date,iana) {
+        let date2 = new Date(date.toLocaleString('en-US', { 
+           timeZone: iana 
+        }));
+        var difference = date.getTime()-date2.getTime();
+        return new Date(date.getTime()-difference);
+    }
+
     render() {
-        let colorOfOuterRing = this.props.characteristics.showOuterRing? this.props.characteristics.colorOfScalesAndNumbers : `transparent`; 
-        let colorOfInnerRing = this.props.characteristics.showInnerRing? this.props.characteristics.colorOfScalesAndNumbers : `transparent`; 
+        let colorOfOuterRing = this.props.characteristics.showOuterRing? this.props.characteristics.innerCircleColor : `transparent`; 
+        let colorOfInnerRing = this.props.characteristics.showInnerRing? this.props.characteristics.innerCircleColor : `transparent`; 
         return (
             <div className="container" style={{width: Number(this.props.characteristics.width), height: Number(this.props.characteristics.width)}}>
                 <div className="outer-circle" style={{backgroundColor: `${colorOfOuterRing}`}}>

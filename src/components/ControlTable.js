@@ -40,6 +40,8 @@ const  ControlTable = (props) => {
                   <Form func={props.changeInnerCircleColor} value={props.characteristics.innerCircleColor}/>
                   <h6>Color Of Center Dot</h6>
                   <Form func={props.changeCenterDotColor} value={props.characteristics.centerDotColor}/>
+                  <h6>Time Zone (format: 'Europe/Paris')</h6>
+                  <Form func={props.changeTimeZone} value={props.characteristics.iana}/>
             </div>
       </div>
     );
