@@ -1,4 +1,5 @@
 ![downloads](https://img.shields.io/npm/dt/ras-react-component.svg)
+[![language](https://img.shields.io/badge/language-ES%206-green.svg)]
 
 # React Analog Clock
 
@@ -54,12 +55,12 @@ class App extends Component {
 ```
 
 
-#### Props
+## Properties
 
-|Prop name|Description|Example values|
-|----|----|----|
-|showRomanNumbers|This is Boolean value that will define what kind of numbers will be rendered, Roman or Arabic|`true` or `false` |
-|showMinuteScale|This is Boolean value that will define if the minute scale is rendered. Defaults to `true`.|`true` or `false` |
+|Prop name|Description|Example values|Default value|
+|----|----|----|----|
+|showRomanNumbers|This is Boolean value that will define what kind of numbers will be rendered, Roman or Arabic|`true` or `false` | `false` |
+|showMinuteScale|This is Boolean value that will define if the minute scale is rendered. Defaults to `true`.|`true` or `false` | `true` |
 
 ## License
 
