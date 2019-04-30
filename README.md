@@ -67,7 +67,7 @@ export default App;
 
 ## License
 
-[The ISC License] (https://opensource.org/licenses/ISC)
+[The ISC License](https://opensource.org/licenses/ISC)
 
 ## Author
 
