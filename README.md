@@ -2,7 +2,7 @@
 ![language](https://img.shields.io/badge/language-ES%206-brightgreen.svg)
 ![license](https://img.shields.io/badge/license-ISC-brightgreen.svg)
 
-# REACT AANALOG CLOCK
+# REACT ANALOG CLOCK
 
 Just an analog clock for your React app.
 
@@ -63,7 +63,10 @@ export default App;
 |Prop name|Description|Example values|Default value|
 |----|----|----|----|
 |showRomanNumbers|This is Boolean value that will define what kind of numbers will be rendered, Roman or Arabic|`true` or `false` | `false` |
-|showMinuteScale|This is Boolean value that will define if the minute scale is rendered. Defaults to `true`.|`true` or `false` | `true` |
+|showMinuteScale|This is Boolean value that will define if the minute scale should be  rendered.|`true` or `false` | `true` |
+|showHourScale|This is Boolean value that will define if the hour scale should be rendered.|`true` or `false` | `true` |
+|showNumbers|This is Boolean value that will define if the numbers should be rendered.|`true` or `false` | `true` |
+|radialDirectionOfNumbers|This is Boolean value that will define if the numbers should be rendered radialy. By default they are rendered horizontally|`true` or `false` | `false` |
 
 ## License
 
