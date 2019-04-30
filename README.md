@@ -1,5 +1,5 @@
 ![downloads](https://img.shields.io/npm/dt/ras-react-component.svg)
-![language](https://img.shields.io/badge/language-ES%206.svg)
+![language](https://img.shields.io/badge/language-ES%206-brightgreen.svg)
 
 # React Analog Clock
 
