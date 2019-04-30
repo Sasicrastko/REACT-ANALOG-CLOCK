@@ -2,14 +2,14 @@
 ![language](https://img.shields.io/badge/language-ES%206-brightgreen.svg)
 ![license](https://img.shields.io/badge/license-ISC-brightgreen.svg)
 
-# React Analog Clock
+# REACT AANALOG CLOCK
 
 Just an analog clock for your React app.
 
 
 ## Demo
 
-[DEMO](https://react-analog-clock-component.herokuapp.com/)  is available!
+[DEMO](https://react-analog-clock-component.herokuapp.com/)!
 You can play with the clock and choose the look of it by setting its characteristics online!
 
 ## Installation
@@ -40,7 +40,7 @@ const style = {
   centerDotColor: `black`,
   width: 300,
   numberSize: 100,
-  iana: 'Europe/Dublin'
+  iana: `Europe/Dublin`
 }
 
 class App extends Component {
@@ -53,6 +53,8 @@ class App extends Component {
     );
   }
 }
+
+export default App;
 ```
 
 
@@ -65,7 +67,7 @@ class App extends Component {
 
 ## License
 
-The ISC License.
+[The ISC License] (https://opensource.org/licenses/ISC)
 
 ## Author
 
