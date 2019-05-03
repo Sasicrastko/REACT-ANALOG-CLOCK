@@ -12,7 +12,6 @@ Just an analog clock for your React app.
 
 ## Demo
 
-[DEMO](https://react-analog-clock-component.herokuapp.com/)!
 You can play with the clock [HERE](https://react-analog-clock-component.herokuapp.com/)! and choose the look of it by setting its characteristics online!
 
 ## Installation
