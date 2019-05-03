@@ -68,7 +68,18 @@ export default App;
 |showHourScale|Boolean value that determines if the hour scale should be rendered.|`true` or `false` | `true` |
 |showNumbers|Boolean value that will determines if the numbers should be rendered.|`true` or `false` | `true` |
 |radialDirectionOfNumbers|Boolean value that determines if the numbers should be rendered radialy. By default they are rendered horizontally|`true` or `false` | `false` |
-|colorOfScalesAndNumbers|String value that determines color of the scales and the numbers.|`"black"` or `"#1a1a1a"` or `"rgb(255,0,0)"` or `"transparent"` | `"black"` |
+|colorOfScalesAndNumbers|String that determines color of the scales and the numbers.|`"black"` or `"#1a1a1a"` or `"rgb(255,0,0)"` or `"transparent"` | `"black"` |
+|hourHandColor|String that determines color of the hour hand.|`"black"` or `"#1a1a1a"` or `"rgb(15,15,15)"` or `"transparent"` | `"#151515"`|
+|minuteHandColor|Stringthat determines color of the minute hand.|`"black"` or `"#1a1a1a"` or `"rgb(15,15,15)"` or `"transparent"` | `"black"`|
+|secondHandColor|String that determines color of the second hand.|`"black"` or `"#1a1a1a"` or `"rgb(15,15,15)"` or `"transparent"` | `"red"`|
+|firstCircleColor|String that determines color of the first  concentric circle.|`"black"` or `"#1a1a1a"` or `"rgb(15,15,15)"` or `"transparent"` | `"white"`|
+|secondCircleColor|String that determines color of the second concentric circle.|`"black"` or `"#1a1a1a"` or `"rgb(15,15,15)"` or `"transparent"` | `"white"`|
+|thirdCircleColor|String that determines color of the third concentric circle.|`"black"` or `"#1a1a1a"` or `"rgb(15,15,15)"` or `"transparent"` | `"white"`|
+|fourthCircleColor|String that determines color of the fourth concentric circle.|`"black"` or `"#1a1a1a"` or `"rgb(15,15,15)"` or `"transparent"` | `"black"`|
+|centerDotColor:|String that determines color of the dot in the center.|`"black"` or `"#1a1a1a"` or `"rgb(15,15,15)"` or `"transparent"` | `"black"`|
+|width|Number that determines clock width (in pixels). It should be an integer. |`400` | `300`|
+|numberSize|Number that determines the size of the numbers. It should be an integer. |`400` | `300`|
+|iana|String that determines the time zone. It should be in [iana](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) format. |`America/Chicago` | ``|
 
 ## License
 
