@@ -6,15 +6,18 @@
 
 Just an analog clock for your React app.
 
+## NPM
+
+[ras-react-component](https://www.npmjs.com/package/ras-react-component)
 
 ## Demo
 
 [DEMO](https://react-analog-clock-component.herokuapp.com/)!
-You can play with the clock and choose the look of it by setting its characteristics online!
+You can play with the clock [HERE](https://react-analog-clock-component.herokuapp.com/)! and choose the look of it by setting its characteristics online!
 
 ## Installation
 
-Add this clock to your project by executing `npm install --save ras-react-component` or `yarn add ras-react-component`.
+Add this analog clock to your project by executing `npm install --save ras-react-component` or `yarn add ras-react-component`.
 
 ## Usage
 
@@ -76,10 +79,10 @@ export default App;
 |secondCircleColor|String that determines color of the second concentric circle.|`"black"` or `"#1a1a1a"` or `"rgb(15,15,15)"` or `"transparent"` | `"white"`|
 |thirdCircleColor|String that determines color of the third concentric circle.|`"black"` or `"#1a1a1a"` or `"rgb(15,15,15)"` or `"transparent"` | `"white"`|
 |fourthCircleColor|String that determines color of the fourth concentric circle.|`"black"` or `"#1a1a1a"` or `"rgb(15,15,15)"` or `"transparent"` | `"black"`|
-|centerDotColor:|String that determines color of the dot in the center.|`"black"` or `"#1a1a1a"` or `"rgb(15,15,15)"` or `"transparent"` | `"black"`|
+|centerDotColor|String that determines color of the dot in the center.|`"black"` or `"#1a1a1a"` or `"rgb(15,15,15)"` or `"transparent"` | `"black"`|
 |width|Number that determines clock width (in pixels). It should be an integer. |`400` | `300`|
 |numberSize|Number that determines the size of the numbers. It should be an integer. |`400` | `300`|
-|iana|String that determines the time zone. It should be in [iana](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) format. |`America/Chicago` | ``|
+|iana|String that determines the time zone. It should be in [IANA](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) format. |`America/Chicago` | `""`|
 
 ## License
 
