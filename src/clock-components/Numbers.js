@@ -16,6 +16,7 @@ const romanNumbers = {
 }
 
 const  Numbers = (props) => {
+    
         let arr = []; //fill this array with 12 numbers
         let counter = 12;
         while(counter--){

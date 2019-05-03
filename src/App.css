@@ -85,7 +85,15 @@ h5,h6{
     border-radius: 50%;
 }
 
-input{
+.left-side input{
+    margin-top: 20px;
+    margin-bottom: 18px;
+    min-width: 150px;
+    max-width: 150px;
+    margin-left: 10px;
+}
+
+.right-side input{
     margin-top: 20px;
     margin-bottom: 18px;
     min-width: 150px;

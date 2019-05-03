@@ -16,13 +16,14 @@ const defaultCharacteristics = {
     hourHandColor: `#151515`,
     minuteHandColor: `black`,
     secondHandColor: `red`,
-    innerCircleColor: `white`,
-    innerCircleColor: `blue`,
-    centerDotColor: `#212131`,
-    width: 500,
-    numberSize: 280,
-    iana: ''
-
+    firstCircleColor: `white`,
+    secondCircleColor: `white`,
+    thirdCircleColor: `white`,
+    fourthCircleColor: `black`,
+    centerDotColor: `black`,
+    width: 300,
+    numberSize: 150,
+    iana: ``
 }
 
 
@@ -35,7 +36,7 @@ class App extends Component {
         }
 }
 
-  changeShowRomanNumbers = ()=> {
+  changeShowRomanNumbers = () => {
     let characteristics = this.state.characteristics;
     characteristics.showRomanNumbers = !this.state.characteristics.showRomanNumbers;
     this.setState({characteristics : characteristics});
@@ -113,9 +114,27 @@ class App extends Component {
     this.setState({characteristics : characteristics});
   }
 
-  changeInnerCircleColor = (color) => {
+  changeFirstCircleColor = (color) => {
     let characteristics = this.state.characteristics;
-    characteristics.innerCircleColor = color;
+    characteristics.firstCircleColor = color;
+    this.setState({characteristics : characteristics});
+  }
+
+  changeSecondCircleColor = (color) => {
+    let characteristics = this.state.characteristics;
+    characteristics.secondCircleColor = color;
+    this.setState({characteristics : characteristics});
+  }
+
+  changeThirdCircleColor = (color) => {
+    let characteristics = this.state.characteristics;
+    characteristics.thirdCircleColor = color;
+    this.setState({characteristics : characteristics});
+  }
+
+  changeFourthCircleColor = (color) => {
+    let characteristics = this.state.characteristics;
+    characteristics.fourthCircleColor = color;
     this.setState({characteristics : characteristics});
   }
 
@@ -153,7 +172,10 @@ class App extends Component {
                       changeHourHandColor={this.changeHourHandColor}
                       changeMinuteHandColor={this.changeMinuteHandColor}
                       changeSecondHandColor={this.changeSecondHandColor}
-                      changeInnerCircleColor={this.changeInnerCircleColor}
+                      changeFirstCircleColor={this.changeFirstCircleColor}
+                      changeSecondCircleColor={this.changeSecondCircleColor}
+                      changeThirdCircleColor={this.changeThirdCircleColor}
+                      changeFourthCircleColor={this.changeFourthCircleColor}
                       changeCenterDotColor={this.changeCenterDotColor}
                       changeTimeZone={this.changeTimeZone}
 

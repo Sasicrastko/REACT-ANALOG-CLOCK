@@ -5,7 +5,7 @@ import '../App.css';
 const Header = () =>{
     return (
       <div className="header">
-        <h1>REACT ANALOG CLOCK</h1>
+        <h1>REACT CLOCK</h1>
       </div>
     );
 };

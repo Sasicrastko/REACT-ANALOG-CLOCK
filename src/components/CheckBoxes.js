@@ -15,14 +15,14 @@ class CheckBoxes extends Component {
                 <span 
                   className="checkmark" 
                   onClick={!this.props.value? this.handleClick : null} 
-                  style={this.props.value? {backgroundColor: `green`} : null}>
+                  style={this.props.value? {backgroundColor: `red`} : null}>
                 </span>
             </label>
             <label className="checkbox-container">False
                 <span 
                   className="checkmark" 
                   onClick={this.props.value? this.handleClick : null} 
-                  style={!this.props.value? {backgroundColor: `green`} : null}>
+                  style={!this.props.value? {backgroundColor: `red`} : null}>
                 </span>
             </label>
       </div>
