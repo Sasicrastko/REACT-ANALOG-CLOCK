@@ -25,22 +25,23 @@ import React, { Component } from 'react';
 import AnalogClock from 'ras-react-component';
 
 const style = {
-  showRomanNumbers: true,
-  showMinuteScale: false,
-  showHourScale: true,
-  showNumbers: true,
-  radialDirectionOfNumbers: true,
-  showOuterRing: true,
-  showInnerRing: false,
-  colorOfScalesAndNumbers: `blue`,
-  hourHandColor: `green`,
-  minuteHandColor: `brown`,
-  secondHandColor: `black`,
-  innerCircleColor: `yellow`,
-  centerDotColor: `black`,
-  width: 300,
-  numberSize: 100,
-  iana: `Europe/Dublin`
+    showRomanNumbers: false,
+    showMinuteScale: true,
+    showHourScale: true,
+    showNumbers: true,
+    radialDirectionOfNumbers: false,
+    colorOfScalesAndNumbers: `black`,
+    hourHandColor: `#151515`,
+    minuteHandColor: `black`,
+    secondHandColor: `red`,
+    firstCircleColor: `white`,
+    secondCircleColor: `white`,
+    thirdCircleColor: `white`,
+    fourthCircleColor: `black`,
+    centerDotColor: `black`,
+    width: 300,
+    numberSize: 150,
+    iana: `Europe/Dublin`
 }
 
 class App extends Component {
@@ -62,11 +63,12 @@ export default App;
 
 |Prop name|Description|Example values|Default value|
 |----|----|----|----|
-|showRomanNumbers|This is Boolean value that will define what kind of numbers will be rendered, Roman or Arabic|`true` or `false` | `false` |
-|showMinuteScale|This is Boolean value that will define if the minute scale should be  rendered.|`true` or `false` | `true` |
-|showHourScale|This is Boolean value that will define if the hour scale should be rendered.|`true` or `false` | `true` |
-|showNumbers|This is Boolean value that will define if the numbers should be rendered.|`true` or `false` | `true` |
-|radialDirectionOfNumbers|This is Boolean value that will define if the numbers should be rendered radialy. By default they are rendered horizontally|`true` or `false` | `false` |
+|showRomanNumbers|Boolean value that determines what kind of numbers will be rendered, Roman or Arabic|`true` or `false` | `false` |
+|showMinuteScale|Boolean value that determines if the minute scale should be  rendered.|`true` or `false` | `true` |
+|showHourScale|Boolean value that determines if the hour scale should be rendered.|`true` or `false` | `true` |
+|showNumbers|Boolean value that will determines if the numbers should be rendered.|`true` or `false` | `true` |
+|radialDirectionOfNumbers|Boolean value that determines if the numbers should be rendered radialy. By default they are rendered horizontally|`true` or `false` | `false` |
+|colorOfScalesAndNumbers|String value that determines color of the scales and the numbers.|`black` or `#1a1a1a` or `rgb(255,0,0)` or `transparent` | `black` |
 
 ## License
 

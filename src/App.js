@@ -17,6 +17,7 @@ const defaultCharacteristics = {
     minuteHandColor: `black`,
     secondHandColor: `red`,
     innerCircleColor: `white`,
+    innerCircleColor: `blue`,
     centerDotColor: `#212131`,
     width: 500,
     numberSize: 280,

@@ -43,7 +43,7 @@ class Clock extends Component {
     }
 
     render() {
-        let colorOfOuterRing = this.props.characteristics.showOuterRing? this.props.characteristics.innerCircleColor : `transparent`; 
+        let colorOfOuterRing = this.props.characteristics.showOuterRing? this.props.characteristics.outerCircleColor : `transparent`; 
         let colorOfInnerRing = this.props.characteristics.showInnerRing? this.props.characteristics.innerCircleColor : `transparent`; 
         return (
             <div className="container" style={{width: Number(this.props.characteristics.width), height: Number(this.props.characteristics.width)}}>
