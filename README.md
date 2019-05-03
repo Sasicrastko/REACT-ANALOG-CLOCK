@@ -68,7 +68,7 @@ export default App;
 |showHourScale|Boolean value that determines if the hour scale should be rendered.|`true` or `false` | `true` |
 |showNumbers|Boolean value that will determines if the numbers should be rendered.|`true` or `false` | `true` |
 |radialDirectionOfNumbers|Boolean value that determines if the numbers should be rendered radialy. By default they are rendered horizontally|`true` or `false` | `false` |
-|colorOfScalesAndNumbers|String value that determines color of the scales and the numbers.|`black` or `#1a1a1a` or `rgb(255,0,0)` or `transparent` | `black` |
+|colorOfScalesAndNumbers|String value that determines color of the scales and the numbers.|`"black"` or `"#1a1a1a"` or `"rgb(255,0,0)"` or `"transparent"` | `"black"` |
 
 ## License
 
