@@ -27,7 +27,7 @@ Add this analog clock to your project by executing `npm install --save ras-react
 ## Elements
 
 The clock consists of the base, minute scale, hour scale, numbers, hands and the center dot. The bese consist of four concentric circles placed one over other. Numbers can be Roman and Arabic and they can take horizontal and radial position. 
-![elements](https://github.com/Sasicrastko/REACT-ANALOG-CLOCK/blob/master/images/elements.png "Elements of the clock")
+![elements](https://github.com/Sasicrastko/REACT-ANALOG-CLOCK/blob/master/images/elements1.png "Elements of the clock")
 
 ## Usage
 
