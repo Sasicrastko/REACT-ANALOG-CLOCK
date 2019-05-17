@@ -23,7 +23,7 @@ const defaultCharacteristics = {
     centerDotColor: `black`,
     width: 300,
     numberSize: 150,
-    iana: ``
+    iana: `Egypt`
 }
 
 
@@ -66,17 +66,17 @@ class App extends Component {
     this.setState({characteristics : characteristics});
   }
 
-  changeShowOuterRing = () => {
-    let characteristics = this.state.characteristics;
-    characteristics.showOuterRing = !this.state.characteristics.showOuterRing;
-    this.setState({characteristics : characteristics});
-  }
+  // changeShowOuterRing = () => {
+  //   let characteristics = this.state.characteristics;
+  //   characteristics.showOuterRing = !this.state.characteristics.showOuterRing;
+  //   this.setState({characteristics : characteristics});
+  // }
 
-  changeShowInnerRing = () => {
-    let characteristics = this.state.characteristics;
-    characteristics.showInnerRing = !this.state.characteristics.showInnerRing;
-    this.setState({characteristics : characteristics});
-  }
+  // changeShowInnerRing = () => {
+  //   let characteristics = this.state.characteristics;
+  //   characteristics.showInnerRing = !this.state.characteristics.showInnerRing;
+  //   this.setState({characteristics : characteristics});
+  // }
 
   changeWidth = (width) => {
     let characteristics = this.state.characteristics;
@@ -152,7 +152,6 @@ class App extends Component {
 
 
   render() {
-    //console.log(this.state);
     return (
       <div className="App">
         <Header/>

@@ -12,6 +12,8 @@ const  ControlTable = (props) => {
                   <Form func={props.changeWidth} value={props.characteristics.width}/>
                   <h6>Number Size</h6>
                   <Form func={props.changeNumberSize} value={props.characteristics.numberSize}/>
+                  <h6>Color Of Center Dot</h6>
+                  <Form func={props.changeCenterDotColor} value={props.characteristics.centerDotColor}/>
                   <h6>Roman Numbers?</h6>
                   <CheckBoxes func={props.changeShowRomanNumbers} value={props.characteristics.showRomanNumbers}/>
                   <h6>Minut Scale Visible?</h6>
@@ -22,10 +24,6 @@ const  ControlTable = (props) => {
                   <CheckBoxes func={props.changeRadialDirectionOfNumbers} value={props.characteristics.radialDirectionOfNumbers}/>
                   <h6>Show Numbers?</h6>
                   <CheckBoxes func={props.changeShowNumbers} value={props.characteristics.showNumbers}/>
-                  <h6>Outer Ring Visible?</h6>
-                  <CheckBoxes  func={props.changeShowOuterRing} value={props.characteristics.showOuterRing}/>
-                  <h6>Inner Ring Visible?</h6>
-                  <CheckBoxes func={props.changeShowInnerRing} value={props.characteristics.showInnerRing}/>
             </div>
             <div className="right-side">
                   <h6>Scales&Numbers Color</h6>
@@ -44,8 +42,6 @@ const  ControlTable = (props) => {
                   <Form func={props.changeThirdCircleColor} value={props.characteristics.thirdCircleColor}/>
                   <h6>Color Of Fourth Circle</h6>
                   <Form func={props.changeFourthCircleColor} value={props.characteristics.fourthCircleColor}/>
-                  <h6>Color Of Center Dot</h6>
-                  <Form func={props.changeCenterDotColor} value={props.characteristics.centerDotColor}/>
             </div>
       </div>
     );
