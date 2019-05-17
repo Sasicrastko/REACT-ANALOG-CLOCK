@@ -94,6 +94,11 @@ export default App;
 |numberSize|Number that determines the size of the numbers. It should be an integer. |`400` | `300`|
 |iana|String that determines the time zone. It should be in [IANA](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) format. |`America/Chicago` | `""`|
 
+## Examples
+
+The look of the watch can be set on many ways and some of examples are on the image bellow.
+![examples](https://github.com/Sasicrastko/REACT-ANALOG-CLOCK/blob/master/images/examples.png "Elements of the clock")
+
 ## License
 
 [The ISC License](https://opensource.org/licenses/ISC)
