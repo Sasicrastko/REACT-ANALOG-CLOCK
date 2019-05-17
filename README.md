@@ -10,11 +10,6 @@ Just an analog clock for your React app.
 
 [ras-react-component](https://www.npmjs.com/package/ras-react-component)
 
-![downloads](https://img.shields.io/npm/dt/ras-react-component.svg)
-![language](https://img.shields.io/badge/language-ES%206-brightgreen.svg)
-![license](https://img.shields.io/badge/license-ISC-brightgreen.svg)
-
-
 ## Demo
 
 You can play with the clock [HERE](https://react-analog-clock-component.herokuapp.com/) and choose the look of it by setting its characteristics online!
