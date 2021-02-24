@@ -2,9 +2,9 @@
 ![language](https://img.shields.io/badge/language-ES%206-brightgreen.svg)
 ![license](https://img.shields.io/badge/license-ISC-brightgreen.svg)
 
-# REACT ANALOG WATCH
+# REACT ANALOG CLOCK
 
-Just an analog watch for your React app.
+Just an analog clock for your React app.
 
 ## NPM
 
@@ -12,7 +12,7 @@ Just an analog watch for your React app.
 
 ## Demo
 
-You can play with the clock [HERE](https://react-analog-clock-component.herokuapp.com/) and choose the look of it by setting its characteristics online!
+You can play with the clock [HERE](https://glacial-lake-58970.herokuapp.com/) and choose the look of it by setting its characteristics online!
 
 ## Installation
 
@@ -30,7 +30,7 @@ An example of usage:
 
 ```js
 import React, { Component } from 'react';
-import AnalogWatch from 'ras-react-component';
+import AnalogClock from 'ras-react-component';
 
 const style = {
     showRomanNumbers: false,
@@ -57,7 +57,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <AnalogWatch style={style}/>
+        <AnalogClock style={style}/>
       </div>
     );
   }
