@@ -20,7 +20,9 @@ class App extends React.Component {
       <div className="App">
         <Header/>
         <Form  setCharacteristics={this.setCharacteristics}/>
-        <Clock characteristics={this.state.characteristics}/>
+        <div className="right-side">
+          <Clock characteristics={this.state.characteristics}/>
+        </div>
       </div>
     );
   }

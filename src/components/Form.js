@@ -7,10 +7,12 @@ class Form extends React.Component {
     super(props);
     this.state = {
       value: defaultJSON,
+      lastValidValue: defaultJSON,
       errorInJSON: null
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.reset = this.reset.bind(this);
   }
 
   handleChange(event) {
@@ -19,9 +21,17 @@ class Form extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    const object = this.state.value;
-    if(this.isValidJSON(object)) {
-        this.props.setCharacteristics(JSON.parse(this.state.value));
+    const value = this.state.value;
+    try {
+      this.prettify(value);
+    }
+    catch(e) {
+
+    }
+    if(this.isValidJSON(value)) {
+        this.setState({lastValidValue: value}, () => {
+          this.props.setCharacteristics(JSON.parse(value));
+        });
     }
   }
 
@@ -36,14 +46,35 @@ class Form extends React.Component {
     }
   }
 
+  prettify (value) {
+    var obj = JSON.parse(value);
+    const pretty = JSON.stringify(obj, undefined, 2);
+    this.setState({value: pretty});
+  }
+
+  reset() {
+    this.setState({
+      value: this.state.lastValidValue,
+      errorInJSON: null
+    });
+  }
+
   render() {
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          <textarea value={this.state.value} onChange={this.handleChange} />
-          <input type="submit" value="Submit" />
-        </form>
-        {this.state.errorInJSON && <p>{this.state.errorInJSON}</p>}
+      <div className="left-side">
+        <div className="form">
+          <label 
+            className={this.state.errorInJSON  ? "error-message": "label"}
+          >
+            {this.state.errorInJSON  ? `Error: ${this.state.errorInJSON}!` : "Enter the watch characteristics in JSON format!"}
+          </label>
+          <form 
+            onSubmit={this.state.errorInJSON ? this.reset : this.handleSubmit}
+          >
+            <textarea value={this.state.value} onChange={this.handleChange} spellCheck="false"/>
+            <button type="submit">{this.state.errorInJSON ?  "RESET" : "SUBMIT"}</button>
+          </form>
+        </div>
       </div>
     );
   }

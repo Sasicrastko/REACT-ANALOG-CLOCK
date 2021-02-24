@@ -1,4 +1,5 @@
 export const defaultJSON = `{ 
+  "width": 300,
   "showRomanNumbers": false,
   "showMinuteScale": true,
   "showHourScale": true,
@@ -15,7 +16,6 @@ export const defaultJSON = `{
   "thirdCircleColor": "white",
   "fourthCircleColor": "black",
   "centerDotColor": "black",
-  "width": 300,
   "numberSize": 150,
   "iana": "Europe/London"
 }`;

@@ -1,111 +1,90 @@
 body{
-    background-color: #f1f1f1; 
-    background: url(salvador_dali.jpg);
+    background: linear-gradient(to bottom right, rgb(96, 38, 134), lightblue);
+}
+
+html, 
+body {
+    height: 100%;
 }
 
 h1{
-    font-size: 50px;
-    text-shadow: 2px 2px rgba(55, 55, 55, .2);
-    color: rgba(255, 255, 255, .7); 
+    font-size: 40px;
+    margin-bottom: 0;
+    text-shadow: 3px 3px black;
+    color: white
 }
 
 h5,h6{
-    text-shadow: 1px 1px rgba(55, 55, 55, .2);
-    color: rgba(255, 255, 255, .7); 
+    text-shadow: 2px 2px black;
+    color: white;
     margin-left: 10px;
+    margin-top: 0;
 }
 
-/*CSS FOR HEADER */
-.header{
-    padding-top: 0px;
-    height: 120px;
-    background-color: rgba(155, 155, 155, .4);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/*CSS FOR CONTROL TABLE */
-.control-table{
-    position: absolute;
-    left: 3%;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    padding-top: 0px;
-    width: 384px;
-    background-color: rgba(155, 155, 155, .4);
-    border-radius: 2%; 
-    border: solid white 4px;
-
-}
-
-.left-side{
-    width: 190px;
-    position: relative;
-    float: left;
-
-  } 
-
-.right-side{
-    width: 190px;
-    position: relative;
-    float: right;
+.header {
+    padding-top: 10px;
+    padding-top: 5px;
+    text-align: center;
+    background: linear-gradient(to bottom right,black, darkgray);
+    font-size: 30px;
   }
+
+.form {
+    margin:20px;
+    display:inline-block;
+    position:relative;
+}
   
-/*CSS FOR CHECKBOX */
-
-/* The container */
-.checkboxes{
-    margin-top: 20px;
-    margin-left: 10px;
-}
-
-.checkbox-container {
-    display: block;
-    position: relative;
-    padding-left: 30px;
-    margin-bottom: 10px;
+button{
+    position:absolute;
+    bottom:10px;
+    right:10px;
+    background-color:  rgb(96, 38, 134);
+    color: white;
+    border: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 12px;
-    color: rgba(255, 255, 255, .7); 
-    text-shadow: 2px 2px rgba(55, 55, 55, .2);
-}
-
-/* Create a custom radio button */
-.checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 12px;
-    width: 12px;
-    background-color: rgba(255, 255, 255, .1);
-    border: 2px solid rgba(255, 255, 255); 
-    border-radius: 50%;
-}
-
-.left-side input{
-    margin-top: 20px;
-    margin-bottom: 18px;
-    min-width: 150px;
-    max-width: 150px;
-    margin-left: 10px;
-}
-
-.right-side input{
-    margin-top: 20px;
-    margin-bottom: 18px;
-    min-width: 150px;
-    max-width: 150px;
-    margin-left: 10px;
-}
-
-h6{
-    margin-bottom: -10px;
 }
 
 textarea {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    display:block;
+    font-size: 16px; 
+    font-family: Arial;
+    color: rgb(96, 38, 134);
     width: 350px;
-    height:330px;
+    height: 390px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.error-message {
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px; 
+}
+
+.label{
+    color: white;
+    text-shadow: 2px 2px black;
+}
+
+.left-side{
+    z-index: 1;
+    padding-left: 20%;
+    width: 30%;
+    position: relative;
+    float: left;
+  } 
+
+.right-side{
+    padding-left: 20%;
+    position: relative;
+    float: left;
 }
 
 
