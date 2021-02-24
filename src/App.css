@@ -75,14 +75,14 @@ textarea {
 
 .left-side{
     z-index: 1;
-    padding-left: 20%;
+    padding-left: 10%;
     width: 30%;
     position: relative;
     float: left;
   } 
 
 .right-side{
-    padding-left: 20%;
+    padding-left: 40%;
     position: relative;
     float: left;
 }

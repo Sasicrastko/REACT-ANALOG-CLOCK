@@ -2,9 +2,9 @@
 ![language](https://img.shields.io/badge/language-ES%206-brightgreen.svg)
 ![license](https://img.shields.io/badge/license-ISC-brightgreen.svg)
 
-# REACT ANALOG CLOCK
+# REACT ANALOG WATCH
 
-Just an analog clock for your React app.
+Just an analog watch for your React app.
 
 ## NPM
 
@@ -21,7 +21,7 @@ Add this analog clock to your project by executing `npm install --save ras-react
 
 ## Elements
 
-The clock consists of the base, minute scale, hour scale, numbers, hands and the center dot. The bese consist of four concentric circles placed one over other. Numbers can be Roman and Arabic and they can take horizontal and radial position. 
+The watch consists of the base, minute scale, hour scale, numbers, hands and the center dot. The bese consist of four concentric circles placed one over other. Numbers can be Roman and Arabic and they can take horizontal and radial position. 
 ![elements](https://github.com/Sasicrastko/REACT-ANALOG-CLOCK/blob/master/images/elements1.png "Elements of the clock")
 
 ## Usage
@@ -30,7 +30,7 @@ An example of usage:
 
 ```js
 import React, { Component } from 'react';
-import AnalogClock from 'ras-react-component';
+import AnalogWatch from 'ras-react-component';
 
 const style = {
     showRomanNumbers: false,
@@ -57,7 +57,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <AnalogClock style={style}/>
+        <AnalogWatch style={style}/>
       </div>
     );
   }
@@ -87,7 +87,7 @@ export default App;
 |fourthCircleColor|String that determines color of the fourth concentric circle.|`"black"` or `"#1a1a1a"` or `"rgb(15,15,15)"` or `"transparent"` | `"black"`|
 |centerDotColor|String that determines color of the dot in the center.|`"black"` or `"#1a1a1a"` or `"rgb(15,15,15)"` or `"transparent"` | `"black"`|
 |numberSize|Number that determines the size of the numbers. It should be an integer. |`400` | `300`|
-|iana|String that determines the time zone. It should be in [IANA](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) format. |`"America/Chicago"` | `"Europe/London"`|
+|iana|String that determines the time zone. It should be in [IANA](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) format. |`"America/Chicago"` or `undefined`, `null` and `""` for local time | `"Europe/London"`|
 
 ## Examples
 

@@ -55,12 +55,12 @@ class Clock extends Component {
                 timeZone: iana 
              }));       
         } catch (error) {
+            if(iana!=="" && iana!==undefined  && iana!==null ) {
             console.error (
-                `react-ras-component accepted iana:"${iana}" what is wrong IANA format.\n The time zone was set to default value: "${Clock.defaultProps.characteristics.iana}"\n See formats here:`, 
-                 "https://en.wikipedia.org/wiki/List_of_tz_database_time_zones")
-            return new Date(date.toLocaleString('en-US', { 
-                timeZone:  Clock.defaultProps.characteristics.iana
-             }));        
+                `react-ras-component accepted "${iana}" for "iana". This is wrong IANA value\nso the time zone was set to local time.\nLook for available IANA values here:`, 
+                 "https://en.wikipedia.org/wiki/List_of_tz_database_time_zones");
+            }
+            return new Date();   
         }
     };
 
