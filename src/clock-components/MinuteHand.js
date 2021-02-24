@@ -7,8 +7,7 @@ class  MinuteHand extends Component {
                 <div className="visible-part-min-hand" style={{background: this.props.color}}></div>
             </div>
         )
-
     }
-}
+};
  
 export default MinuteHand;

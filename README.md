@@ -69,7 +69,7 @@ export default App;
 
 ## Properties
 
-|Prop name|Description|Example values|Default value|
+|Characteristic|Description|Example values|Default value|
 |----|----|----|----|
 |showRomanNumbers|Boolean value that determines what kind of numbers will be rendered, Roman or Arabic|`true` or `false` | `false` |
 |showMinuteScale|Boolean value that determines if the minute scale should be  rendered.|`true` or `false` | `true` |
