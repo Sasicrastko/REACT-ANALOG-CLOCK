@@ -12,7 +12,7 @@ Just an analog clock for your React app.
 
 ## Demo
 
-You can play with the clock [HERE](https://glacial-lake-58970.herokuapp.com/) and choose the look of it by setting its characteristics online!
+You can play with the clock [HERE](https://glacial-lake-58970.herokuapp.com/) and choose its look by setting characteristics!
 
 ## Installation
 
