@@ -71,6 +71,7 @@ export default App;
 
 |Characteristic|Description|Example values|Default value|
 |----|----|----|----|
+|width|Number that determines clock width (in pixels). It should be an integer. |`400` | `300`|
 |showRomanNumbers|Boolean value that determines what kind of numbers will be rendered, Roman or Arabic|`true` or `false` | `false` |
 |showMinuteScale|Boolean value that determines if the minute scale should be  rendered.|`true` or `false` | `true` |
 |showHourScale|Boolean value that determines if the hour scale should be rendered.|`true` or `false` | `true` |
@@ -85,7 +86,6 @@ export default App;
 |thirdCircleColor|String that determines color of the third concentric circle.|`"black"` or `"#1a1a1a"` or `"rgb(15,15,15)"` or `"transparent"` | `"white"`|
 |fourthCircleColor|String that determines color of the fourth concentric circle.|`"black"` or `"#1a1a1a"` or `"rgb(15,15,15)"` or `"transparent"` | `"black"`|
 |centerDotColor|String that determines color of the dot in the center.|`"black"` or `"#1a1a1a"` or `"rgb(15,15,15)"` or `"transparent"` | `"black"`|
-|width|Number that determines clock width (in pixels). It should be an integer. |`400` | `300`|
 |numberSize|Number that determines the size of the numbers. It should be an integer. |`400` | `300`|
 |iana|String that determines the time zone. It should be in [IANA](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) format. |`"America/Chicago"` | `"Europe/London"`|
 
