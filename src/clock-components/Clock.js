@@ -83,7 +83,7 @@ class Clock extends Component {
                                     }
                                     {this.props.characteristics.showNumbers &&
                                     <Numbers 
-                                        showRomanNumbers={this.props.characteristics.showRomanNumbers} 
+                                        numerals={this.props.characteristics.numerals} 
                                         numberSize={this.props.characteristics.numberSize} 
                                         radialDirectionOfNumbers={this.props.characteristics.radialDirectionOfNumbers} 
                                         color={this.props.characteristics.colorOfScalesAndNumbers}
