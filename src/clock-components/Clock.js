@@ -57,7 +57,7 @@ class Clock extends Component {
         } catch (error) {
             if(iana!=="" && iana!==undefined  && iana!==null ) {
             console.error (
-                `react-ras-component accepted "${iana}" for "iana". This is wrong IANA value\nso the time zone was set to local time.\nLook for available IANA values here:`, 
+                `react-ras-component:\n accepted "${iana}" for "iana". This is wrong IANA value\nso the time zone was set to local time.\nLook for available IANA values here:`, 
                  "https://en.wikipedia.org/wiki/List_of_tz_database_time_zones");
             }
             return new Date();   

@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 
-class  MinuteHand extends Component {
+class  MinuteHand extends PureComponent {
     render() {
         return(
             <div className="minute-hand" style={{transform : `rotate(${this.props.minuteHandAngle}deg)`}}>

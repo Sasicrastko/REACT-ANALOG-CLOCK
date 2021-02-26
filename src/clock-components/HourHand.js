@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 
-const  HourHand = (props) =>  {
+class  HourHand extends PureComponent  {
+    render() {
         return(
-            <div className="hour-hand" style={{transform : `rotate(${props.hourHandAngle}deg)`}}>
-                <div className="visible-part-hour-hand" style={{background: props.color}}></div>
+            <div className="hour-hand" style={{transform : `rotate(${this.props.hourHandAngle}deg)`}}>
+                <div className="visible-part-hour-hand" style={{background: this.props.color}}></div>
             </div>
         )
+    }
 }
  
 export default HourHand;
