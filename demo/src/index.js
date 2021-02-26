@@ -5,24 +5,24 @@ import AnalogClock from '../../src/index';
 
 const json = `
 {
-    "width": 450,
-    "numerals": [1,3,4,7,93,32,2,2],
-    "showMinuteScale": true,
-    "showHourScale": true,
+    "width": 350,
+    "numerals": "gujarati",
+    "showMinuteScale": false,
+    "showHourScale": false,
     "showNumbers": true,
     "radialDirectionOfNumbers": false,
     "showOuterRing": false,
     "showInnerRing": true,
-    "colorOfScalesAndNumbers": "blue",
-    "hourHandColor": "#151515",
-    "minuteHandColor": "black",
-    "secondHandColor": "red",
-    "firstCircleColor": "white",
-    "secondCircleColor": "green",
+    "colorOfScalesAndNumbers": "black",
+    "hourHandColor": "transparent",
+    "minuteHandColor": "transparent",
+    "secondHandColor": "transparent",
+    "firstCircleColor": "transparent",
+    "secondCircleColor": "transparent",
     "thirdCircleColor": "white",
-    "fourthCircleColor": "black",
-    "centerDotColor": "black",
-    "numberSize": 350,
+    "fourthCircleColor": "white",
+    "centerDotColor": "white",
+    "numberSize": 150,
     "iana": "America/New_York"
   }`;
 

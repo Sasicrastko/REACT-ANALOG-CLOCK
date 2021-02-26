@@ -73,10 +73,12 @@ export default App;
 
 ## Properties
 
+Since v1.2.0 there is no `showRomanNumbers` but there is `numerals` instead.
+
 |Characteristic|Description|Example values|Default value|
 |----|----|----|----|
 |width|Number that determines clock width (in pixels). It should be an integer. |`400` | `300`|
-|showRomanNumbers|Boolean value that determines what kind of numbers will be rendered, Roman or Arabic|`true` or `false` | `false` |
+|numerals|Array or string that determines what numerical system is used for numbers. Default value is `"western_arabic"`. If it is array all elements must be strings.|`"western_arabic"`, `"eastern_arabic"`, `"roman"`, `"persian"`, `"chinese"`, `"devanagari”"`, `"tamil"`, `"bengali"`, `"gujarati"`, `"korean"`, `"hebrew"` or a string array like `["", "", "3","", "", "6","", "", "9","", "", "12"]` or with emojis `["🐴","🐮","🐷","🐹","🐗","🐻","🐔","🐵","🐶","🦊","🐱"]`| `"western_arabic"` |
 |showMinuteScale|Boolean value that determines if the minute scale should be  rendered.|`true` or `false` | `true` |
 |showHourScale|Boolean value that determines if the hour scale should be rendered.|`true` or `false` | `true` |
 |showNumbers|Boolean value that determines if the numbers should be rendered.|`true` or `false` | `true` |
@@ -97,6 +99,9 @@ export default App;
 
 The look of the watch can be set on many ways and some of examples are on the image bellow.
 ![examples](https://github.com/Sasicrastko/REACT-ANALOG-CLOCK/blob/master/images/examples.png "Elements of the clock")
+
+Also, it is possible to use diferent numeral systems.
+![numerals](https://github.com/Sasicrastko/REACT-ANALOG-CLOCK/blob/master/images/numerals.png "Examples of different numeral systems")
 
 ## License
 
