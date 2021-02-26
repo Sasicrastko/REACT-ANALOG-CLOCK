@@ -73,7 +73,8 @@ export default App;
 
 ## Properties
 
-Since v1.2.0 there is no `showRomanNumbers` but there is `numerals` instead.
+Since v1.2.0 there is no `showRomanNumbers` but there is `numerals` instead. That enable usage of different numerical systems and characters  or emojis. 
+![numerals](https://github.com/Sasicrastko/REACT-ANALOG-CLOCK/blob/master/images/numerals.png "Examples of different numeral systems")
 
 |Characteristic|Description|Example values|Default value|
 |----|----|----|----|
@@ -99,9 +100,6 @@ Since v1.2.0 there is no `showRomanNumbers` but there is `numerals` instead.
 
 The look of the watch can be set on many ways and some of examples are on the image bellow.
 ![examples](https://github.com/Sasicrastko/REACT-ANALOG-CLOCK/blob/master/images/examples.png "Elements of the clock")
-
-Also, it is possible to use diferent numeral systems.
-![numerals](https://github.com/Sasicrastko/REACT-ANALOG-CLOCK/blob/master/images/numerals.png "Examples of different numeral systems")
 
 ## License
 
