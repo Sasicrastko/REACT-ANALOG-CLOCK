@@ -25,7 +25,12 @@ module.exports = {
             {
                 test: /\.json$/,
                 loader: "json-loader"
-            }
+            },
+            {
+                test: /\.js$/,
+                enforce: 'pre',
+                use: ['source-map-loader'],
+            },
         ]
     },
     plugins: [htmlWebpackPlugin],
