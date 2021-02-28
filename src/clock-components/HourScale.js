@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {PureComponent} from 'react';
 
-const  HourScale = (props) => {
+class  HourScale {
+render() {
     return(
         <div className="hour-scale">
             {Array.from(Array(12).keys()).map( H => {
@@ -13,6 +14,7 @@ const  HourScale = (props) => {
         )}
         </div>
     );
+}
 };
  
 export default HourScale;

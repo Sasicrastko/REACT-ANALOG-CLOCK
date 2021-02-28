@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { PureComponent } from "react";
 
-const  CenterDot = (props) => {
+class CenterDot extends  PureComponent{
+  render() {
     return(
       <div 
         className="center-dot" 
-        style={{backgroundColor: props.color}}>
+        style={{backgroundColor: this.props.color}}>
       </div>
     )
-};
+  }
+}
  
 export default CenterDot;
