@@ -5,12 +5,12 @@ import AnalogClock from '../../src/index';
 
 const json = `
 {
-    "width": 450,
-    "numerals": "",
-    "showMinuteScale": false,
-    "showHourScale": false,
+    "width": 150,
+    "numerals": "roman",
+    "showMinuteScale": true,
+    "showHourScale": true,
     "showNumbers": true,
-    "radialDirectionOfNumbers": false,
+    "radialDirectionOfNumbers": true,
     "showOuterRing": false,
     "showInnerRing": true,
     "colorOfScalesAndNumbers": "black",

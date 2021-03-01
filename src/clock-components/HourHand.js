@@ -1,6 +1,10 @@
 import React, { PureComponent } from 'react';
 
+
 class  HourHand extends PureComponent  {
+    constructor(props) {
+        super(props);
+    }
     render() {
         return(
             <div className="hour-hand" style={{transform : `rotate(${this.props.hourHandAngle}deg)`}}>
