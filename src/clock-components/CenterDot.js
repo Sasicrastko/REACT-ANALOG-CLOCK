@@ -5,7 +5,8 @@ class CenterDot extends  PureComponent{
     return(
       <div 
         className="center-dot" 
-        style={{backgroundColor: this.props.color}}>
+        style={{backgroundColor: this.props.color}}
+      >
       </div>
     )
   }
