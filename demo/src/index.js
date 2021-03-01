@@ -5,7 +5,7 @@ import AnalogClock from '../../src/index';
 
 const json = `
 {
-    "width": 350,
+    "width": 450,
     "numerals": "",
     "showMinuteScale": false,
     "showHourScale": false,
@@ -20,9 +20,9 @@ const json = `
     "firstCircleColor": "white",
     "secondCircleColor": "white",
     "thirdCircleColor": "white",
-    "fourthCircleColor": "white",
-    "centerDotColor": "white",
-    "numberSize": 150,
+    "fourthCircleColor": "black",
+    "centerDotColor": "black",
+    "numberSize": 100,
     "iana": "America/New_York"
   }`;
 

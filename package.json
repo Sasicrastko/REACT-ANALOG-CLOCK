@@ -1,6 +1,6 @@
 {
   "name": "ras-react-component",
-  "version": "1.2.01",
+  "version": "1.2.02",
   "description": "analog clock. react component.",
   "main": "dist/index.js",
   "scripts": {

@@ -1,6 +1,6 @@
 # .npmignore 
-src
 demo
+images
 .babelrc
 .gitignore
 webpack.config.js

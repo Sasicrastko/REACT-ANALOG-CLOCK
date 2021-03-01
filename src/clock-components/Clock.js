@@ -8,6 +8,10 @@ import SecondHand from './SecondHand';
 import './Clock.css';
 import CenterDot from './CenterDot';
 
+let containerStyle = {
+    position: "absolute"
+};
+
 class Clock extends PureComponent {
     constructor(props) {
         super(props);
@@ -66,11 +70,29 @@ class Clock extends PureComponent {
 
     render() {
         return (
-            <div className="container" style={{width: Number(this.props.characteristics.width), height: Number(this.props.characteristics.width)}}>
-                <div className="outer-circle" style={{backgroundColor: this.props.characteristics.fourthCircleColor}}>
-                    <div className="inner-circle1" style={{backgroundColor: this.props.characteristics.thirdCircleColor}}>
-                            <div className="inner-circle2" style={{backgroundColor: this.props.characteristics.secondCircleColor}}>
-                                <div className="inner-circle3" style={{backgroundColor: this.props.characteristics.firstCircleColor}} >
+            <div className="container"
+                 style={{width: Number(this.props.characteristics.width), height: Number(this.props.characteristics.width)}}
+            >
+                <div className="outer-circle" 
+                    style={{
+                        backgroundColor: this.props.characteristics.fourthCircleColor
+                    }}
+                    >
+                    <div className="inner-circle1" 
+                        style={{
+                            backgroundColor: this.props.characteristics.thirdCircleColor
+                            }}
+                        >
+                            <div className="inner-circle2" 
+                                style={{
+                                    backgroundColor: this.props.characteristics.secondCircleColor
+                                }}
+                            >
+                                <div className="inner-circle3" 
+                                    style={{
+                                        backgroundColor: this.props.characteristics.firstCircleColor
+                                    }} 
+                                >
                                     {this.props.characteristics.showMinuteScale && 
                                     <MinuteScale 
                                         color={this.props.characteristics.colorOfScalesAndNumbers}
@@ -101,7 +123,9 @@ class Clock extends PureComponent {
                                         secondHandAngle={this.state.secondHandAngle} 
                                         color={this.props.characteristics.secondHandColor}
                                     />
-                                    <CenterDot color={this.props.characteristics.centerDotColor}/>
+                                    <CenterDot 
+                                        color={this.props.characteristics.centerDotColor}
+                                    />
                                 </div>
                             </div>
                     </div>
