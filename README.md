@@ -37,7 +37,7 @@ import React, { Component } from 'react';
 import AnalogClock from 'ras-react-component';
 
 const style = {
-    showRomanNumbers: false,
+    numerals: "roman",
     showMinuteScale: true,
     showHourScale: true,
     showNumbers: true,
