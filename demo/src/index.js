@@ -8,7 +8,7 @@ import AnalogClock from '../../src/index';
 const json = `
 {
     "width": 300,
-    "numerals": "western_arabic",
+    "numerals": "eastern_arabic",
     "showNumbers": true,
     "radialDirectionOfNumbers": true,
     "showOuterRing": false,
@@ -17,7 +17,7 @@ const json = `
     "hourHandColor": "black",
     "minuteHandColor": "black",
     "secondHandColor": "red",
-    "firstCircleColor": "green",
+    "firstCircleColor": "linear-gradient(red, yellow, green)",
     "secondCircleColor": "white",
     "thirdCircleColor": "white",
     "fourthCircleColor": "yellow",
