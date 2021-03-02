@@ -1,100 +1,99 @@
-.container{
-    position: absolute;
+.container {
+  position: absolute;
 }
 
 .outer-circle {
   position: absolute;
   width: 100%;
   height: 100%;
-  border-radius: 50%;  
+  border-radius: 50%;
 }
 
 .inner-circle1 {
-    position: absolute;
-    top: 2%;
-    left: 2%;
-    width: 96%;
-    height: 96%;
-    border-radius: 50%;
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  width: 96%;
+  height: 96%;
+  border-radius: 50%;
 }
 
-  .inner-circle2 {
-    position: absolute;
-    top: 3%;
-    left: 3%;
-    width: 94%;
-    height: 94%;
-    border-radius: 50%;
+.inner-circle2 {
+  position: absolute;
+  top: 3%;
+  left: 3%;
+  width: 94%;
+  height: 94%;
+  border-radius: 50%;
 }
 
 .inner-circle3 {
-    position: absolute;
-    top: 1%;
-    left: 1%;
-    width: 98%;
-    height: 98%;
-    border-radius: 50%; 
-}
-  
-  .second-hand {
-    position: absolute;
-    top: 49.5%;
-    left: 0%;
-    width: 100%;
-    height: 1%;
+  position: absolute;
+  top: 1%;
+  left: 1%;
+  width: 98%;
+  height: 98%;
+  border-radius: 50%;
 }
 
-  
-.visible-part-sec-hand{
-    position: absolute;
-    top: 0%;
-    left: 50%;
-    width: 45%;
-    height: 100%;  
+.second-hand {
+  position: absolute;
+  top: 49.5%;
+  left: 0%;
+  width: 100%;
+  height: 1%;
 }
-  
+
+.visible-part-sec-hand {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  width: 45%;
+  height: 100%;
+}
+
 .minute-hand {
-    position: absolute;
-    top: 49%;
-    left: 0%;
-    width: 100%;
-    height: 2%;   
-  }
-  
-  .visible-part-min-hand{
-    position: absolute;
-    top: 0%;
-    left: 50%;
-    width: 38%;
-    height: 100%;
-  }
-  
-.hour-hand {
-    position: absolute;
-    top: 48.5%;
-    left: 0%;
-    width: 100%;
-    height: 3%;    
-  }
-  
-  .visible-part-hour-hand{
-    position: absolute;
-    top: 0%;
-    left: 50%;
-    width: 30%;
-    height: 100%;
-  }
-  
-.center-dot {
-    position: absolute;
-    top: 48%;
-    left: 48%;
-    width: 4%;
-    height: 4%;
-    border-radius: 50%;
+  position: absolute;
+  top: 49%;
+  left: 0%;
+  width: 100%;
+  height: 2%;
 }
 
-  /* .number{
+.visible-part-min-hand {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  width: 38%;
+  height: 100%;
+}
+
+.hour-hand {
+  position: absolute;
+  top: 48.5%;
+  left: 0%;
+  width: 100%;
+  height: 3%;
+}
+
+.visible-part-hour-hand {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  width: 30%;
+  height: 100%;
+}
+
+.center-dot {
+  position: absolute;
+  top: 48%;
+  left: 48%;
+  width: 4%;
+  height: 4%;
+  border-radius: 50%;
+}
+
+/* .number{
     width: 100%;
     height: 100%;
     font-weight: 100;
@@ -103,4 +102,3 @@
     justify-content: center;
     font-family: Georgia, Times, 'Times New Roman', serif;
 } */
-

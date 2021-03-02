@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React, { PureComponent } from "react"
 
 class MinuteScale extends PureComponent {
   render() {
@@ -12,7 +12,7 @@ class MinuteScale extends PureComponent {
               transform: `rotate(${(S * 360) / 60}deg)`,
               position: `absolute`,
               top: `49.5%`,
-              left: '0%',
+              left: "0%",
               width: `100%`,
               height: `1%`,
             }}

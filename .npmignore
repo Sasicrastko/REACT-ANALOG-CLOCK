@@ -4,3 +4,5 @@ images
 .babelrc
 .gitignore
 webpack.config.js
+.eslintrc
+.prettierrc

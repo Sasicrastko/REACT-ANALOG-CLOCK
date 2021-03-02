@@ -1,5 +1,5 @@
-import React from 'react'
-import Clock from './clock-components/Clock'
+import React from "react"
+import Clock from "./clock-components/Clock"
 
 const AnalogClock = (props) => (
   <div>

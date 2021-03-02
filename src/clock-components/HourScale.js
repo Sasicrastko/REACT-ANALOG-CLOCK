@@ -1,5 +1,4 @@
-/* eslint-disable react/prop-types */
-import React, { PureComponent } from 'react'
+import React, { PureComponent } from "react"
 
 class HourScale extends PureComponent {
   render() {

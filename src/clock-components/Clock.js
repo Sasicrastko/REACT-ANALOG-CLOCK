@@ -1,14 +1,13 @@
-/* eslint-disable react/prop-types */
-import React, { PureComponent } from 'react'
-import MinuteScale from './MinuteScale'
-import HourScale from './HourScale'
-import MinuteHand from './MinuteHand'
-import HourHand from './HourHand'
-import Numbers from './Numbers'
-import SecondHand from './SecondHand'
-import './Clock.css'
-import CenterDot from './CenterDot'
-import defaultCharacteristics from '../defaultCharacteristics'
+import React, { PureComponent } from "react"
+import MinuteScale from "./MinuteScale"
+import HourScale from "./HourScale"
+import MinuteHand from "./MinuteHand"
+import HourHand from "./HourHand"
+import Numbers from "./Numbers"
+import SecondHand from "./SecondHand"
+import "./Clock.css"
+import CenterDot from "./CenterDot"
+import defaultCharacteristics from "../defaultCharacteristics"
 
 class Clock extends PureComponent {
   constructor(props) {
@@ -51,15 +50,15 @@ class Clock extends PureComponent {
     const date = new Date()
     try {
       return new Date(
-        date.toLocaleString('en-US', {
+        date.toLocaleString("en-US", {
           timeZone: iana,
-        }),
+        })
       )
     } catch (error) {
-      if (iana !== '' && iana !== undefined && iana !== null) {
+      if (iana !== "" && iana !== undefined && iana !== null) {
         console.error(
           `react-ras-component:\n accepted "${iana}" for "iana". This is wrong IANA value\nso the time zone was set to local time.\nLook for available IANA values here:`,
-          'https://en.wikipedia.org/wiki/List_of_tz_database_time_zones',
+          "https://en.wikipedia.org/wiki/List_of_tz_database_time_zones"
         )
       }
       return new Date()
@@ -69,7 +68,7 @@ class Clock extends PureComponent {
   render() {
     const characteristics = Object.assign(
       defaultCharacteristics,
-      this.props.characteristics,
+      this.props.characteristics
     )
     return (
       <div
@@ -104,9 +103,7 @@ class Clock extends PureComponent {
                 }}
               >
                 {characteristics.showMinuteScale && (
-                  <MinuteScale
-                    color={characteristics.colorOfScalesAndNumbers}
-                  />
+                  <MinuteScale color={characteristics.colorOfScalesAndNumbers} />
                 )}
                 {characteristics.showHourScale && (
                   <HourScale color={characteristics.colorOfScalesAndNumbers} />

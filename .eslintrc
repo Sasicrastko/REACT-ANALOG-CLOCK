@@ -4,7 +4,8 @@
     "es6": true
   },
   "plugins": ["import"],
-  "extends": "@imaginary-cloud/react",
+  "extends": ["plugin:prettier/recommended"],
+  "parser": "babel-eslint",
   "parserOptions": {
     "ecmaVersion": 2020,
     "sourceType": "module"
