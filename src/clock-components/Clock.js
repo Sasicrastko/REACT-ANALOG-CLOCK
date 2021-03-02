@@ -7,28 +7,29 @@ import Numbers from './Numbers';
 import SecondHand from './SecondHand';
 import './Clock.css';
 import CenterDot from './CenterDot';
+import defaultCharacteristics from '../defaultCharacteristics';
 
-let defaultCharacteristics = {
-        width: 300,
-        numerals: `western_arabic`,
-        showMinuteScale: true,
-        showHourScale: true,
-        showNumbers: true,
-        radialDirectionOfNumbers: false,
-        showOuterRing: true,
-        showInnerRing: true,
-        colorOfScalesAndNumbers: `black`,
-        hourHandColor: `#151515`,
-        minuteHandColor: `black`,
-        secondHandColor: `red`,
-        firstCircleColor: `white`,
-        secondCircleColor: `white`,
-        thirdCircleColor: `white`,
-        fourthCircleColor: `black`,
-        centerDotColor: `black`,
-        numberSize: 200,
-        iana: `Europe/London`
-}
+// let defaultCharacteristics = {
+//         width: 300,
+//         numerals: `western_arabic`,
+//         showMinuteScale: true,
+//         showHourScale: true,
+//         showNumbers: true,
+//         radialDirectionOfNumbers: false,
+//         showOuterRing: true,
+//         showInnerRing: true,
+//         colorOfScalesAndNumbers: `black`,
+//         hourHandColor: `#151515`,
+//         minuteHandColor: `black`,
+//         secondHandColor: `red`,
+//         firstCircleColor: `white`,
+//         secondCircleColor: `white`,
+//         thirdCircleColor: `white`,
+//         fourthCircleColor: `black`,
+//         centerDotColor: `black`,
+//         numberSize: 200,
+//         iana: `Europe/London`
+// }
 
 class Clock extends PureComponent {
     constructor(props) {
