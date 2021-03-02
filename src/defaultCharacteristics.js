@@ -17,7 +17,7 @@ const defaultCharacteristics = {
   fourthCircleColor: `black`,
   centerDotColor: `black`,
   numberSize: 200,
-  iana: `Europe/London`
+  iana: `Europe/London`,
 }
 
-export default defaultCharacteristics;
+export default defaultCharacteristics

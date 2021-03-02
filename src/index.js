@@ -1,14 +1,10 @@
-import React, { Component } from 'react';
-import Clock from './clock-components/Clock';
+import React from 'react'
+import Clock from './clock-components/Clock'
 
-class AnalogClock extends Component {
-    render() {
-        return (
-        <div>
-            <Clock characteristics={this.props.characteristics}/>
-        </div>
-        );
-    }
-}
+const AnalogClock = (props) => (
+  <div>
+    <Clock characteristics={props.characteristics} />
+  </div>
+)
 
-export default AnalogClock;
+export default AnalogClock

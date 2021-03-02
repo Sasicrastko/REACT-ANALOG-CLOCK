@@ -1,11 +1,10 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react'
 
-class  HourScale extends PureComponent {
-render() {
-    return(
-        <div className="hour-scale">
-            {Array.from(Array(12).keys()).map( H => {
-            return(
+class HourScale extends PureComponent {
+  render() {
+    return (
+      <div className="hour-scale">
+        {Array.from(Array(12).keys()).map((H) => (
                 <div 
                     key={H} 
                     className="diameter" 
@@ -24,11 +23,11 @@ render() {
                     >
                     </div>
                 </div>
-            )}
+            )
         )}
-        </div>
-    );
+      </div>
+    )
+  }
 }
-};
- 
-export default HourScale;
+
+export default HourScale

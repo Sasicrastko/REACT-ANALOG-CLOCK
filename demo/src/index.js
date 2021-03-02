@@ -1,9 +1,9 @@
-/***  examples/src/index.js ***/
-import React from 'react';
-import { render } from 'react-dom';
-import AnalogClock from '../../src/index';
+/** *  examples/src/index.js ** */
+import React from 'react'
+import { render } from 'react-dom'
+import AnalogClock from '../../src/index'
 
-//"width": 270,
+// "width": 270,
 
 const json = `
 {
@@ -31,12 +31,9 @@ const json = `
       "alignItems": "center",
       "justifyContent": "center"
     }
-  }`;
+  }`
 
-  const testingData = JSON.parse(json);
+const testingData = JSON.parse(json)
 
-
-const App = () => (
-    <AnalogClock characteristics={testingData}/>
-);
-render(<App />, document.getElementById("root"));
+const App = () => <AnalogClock characteristics={testingData} />
+render(<App />, document.getElementById('root'))
