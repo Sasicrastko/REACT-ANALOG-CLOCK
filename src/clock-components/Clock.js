@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { PureComponent } from 'react'
 import MinuteScale from './MinuteScale'
 import HourScale from './HourScale'
