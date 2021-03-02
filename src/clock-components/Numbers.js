@@ -1,8 +1,20 @@
 import React, {PureComponent}  from 'react';
 import numeralsMap from '../numeralsMap';
 
+const numbersStyleDefault = {
+    width: `100%`,
+    height: `100%`,
+    fontWeight: `100`,
+    display: `flex`,
+    alignItems: `center`,
+    justifyContent: `center`,
+    fontFamily: `Times`
+}
+
 class  Numbers extends PureComponent{
     render() {
+        console.log(this.props);
+        //let style = Object.assign(numbersStyleDefault, props.numbersStyle )
         let numerals;
         const  areAllElementsStrings = (arr) => {
             return arr.every(x => (typeof x === "string"));

@@ -23,7 +23,14 @@ const json = `
     "fourthCircleColor": "yellow",
     "centerDotColor": "black",
     "numberSize": 200,
-    "iana": "America/New_York"
+    "iana": "America/New_York",
+    "numbersStyle": {
+      "width": "100%",
+      "height": "100%",
+      "display": "flex",
+      "alignItems": "center",
+      "justifyContent": "center"
+    }
   }`;
 
   const testingData = JSON.parse(json);

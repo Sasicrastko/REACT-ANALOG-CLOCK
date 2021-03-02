@@ -67,6 +67,7 @@ class Clock extends PureComponent {
 
     render() {
         let characteristics = Object.assign(defaultCharacteristics, this.props.characteristics);
+        //console.log(characteristics);
         return (
             <div className="container"
                  style={{width: Number(characteristics.width), height: Number(characteristics.width)}}
