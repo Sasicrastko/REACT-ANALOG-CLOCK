@@ -3,12 +3,12 @@ import React from 'react';
 import { render } from 'react-dom';
 import AnalogClock from '../../src/index';
 
+//"width": 270,
+
 const json = `
 {
-    "width": 150,
-    "numerals": "eastern_arabic",
-    "showMinuteScale": true,
-    "showHourScale": true,
+    "width": 300,
+    "numerals": "western_arabic",
     "showNumbers": true,
     "radialDirectionOfNumbers": true,
     "showOuterRing": false,
@@ -17,12 +17,12 @@ const json = `
     "hourHandColor": "black",
     "minuteHandColor": "black",
     "secondHandColor": "red",
-    "firstCircleColor": "white",
+    "firstCircleColor": "green",
     "secondCircleColor": "white",
     "thirdCircleColor": "white",
-    "fourthCircleColor": "black",
+    "fourthCircleColor": "yellow",
     "centerDotColor": "black",
-    "numberSize": 100,
+    "numberSize": 200,
     "iana": "America/New_York"
   }`;
 
@@ -30,6 +30,6 @@ const json = `
 
 
 const App = () => (
-    <AnalogClock style={testingData}/>
+    <AnalogClock characteristics={testingData}/>
 );
 render(<App />, document.getElementById("root"));

@@ -93,7 +93,7 @@ Since v1.2.0 there is no `showRomanNumbers` but there is `numerals` instead. Thi
 |thirdCircleColor|String that determines color of the third concentric circle.|`"black"` or `"#1a1a1a"` or `"rgb(15,15,15)"` or `"transparent"` | `"white"`|
 |fourthCircleColor|String that determines color of the fourth concentric circle.|`"black"` or `"#1a1a1a"` or `"rgb(15,15,15)"` or `"transparent"` | `"black"`|
 |centerDotColor|String that determines color of the dot in the center.|`"black"` or `"#1a1a1a"` or `"rgb(15,15,15)"` or `"transparent"` | `"black"`|
-|numberSize|Number that determines the size of the numbers. It should be an integer. |`400` | `300`|
+|numberSize|Number that determines the size of the numbers. It should be an integer. |`400` | `200`|
 |iana|String that determines the time zone. It should be in [IANA](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) format. |`"America/Chicago"` or `undefined`, `null` and `""` for local time | `"Europe/London"`|
 
 ## Examples

@@ -8,9 +8,27 @@ import SecondHand from './SecondHand';
 import './Clock.css';
 import CenterDot from './CenterDot';
 
-let containerStyle = {
-    position: "absolute"
-};
+let defaultCharacteristics = {
+        width: 300,
+        numerals: `western_arabic`,
+        showMinuteScale: true,
+        showHourScale: true,
+        showNumbers: true,
+        radialDirectionOfNumbers: false,
+        showOuterRing: true,
+        showInnerRing: true,
+        colorOfScalesAndNumbers: `black`,
+        hourHandColor: `#151515`,
+        minuteHandColor: `black`,
+        secondHandColor: `red`,
+        firstCircleColor: `white`,
+        secondCircleColor: `white`,
+        thirdCircleColor: `white`,
+        fourthCircleColor: `black`,
+        centerDotColor: `black`,
+        numberSize: 200,
+        iana: `Europe/London`
+}
 
 class Clock extends PureComponent {
     constructor(props) {
@@ -69,62 +87,63 @@ class Clock extends PureComponent {
     };
 
     render() {
+        let characteristics = Object.assign(defaultCharacteristics, this.props.characteristics);
         return (
             <div className="container"
-                 style={{width: Number(this.props.characteristics.width), height: Number(this.props.characteristics.width)}}
+                 style={{width: Number(characteristics.width), height: Number(characteristics.width)}}
             >
                 <div className="outer-circle" 
                     style={{
-                        backgroundColor: this.props.characteristics.fourthCircleColor
+                        backgroundColor: characteristics.fourthCircleColor
                     }}
                     >
                     <div className="inner-circle1" 
                         style={{
-                            backgroundColor: this.props.characteristics.thirdCircleColor
+                            backgroundColor: characteristics.thirdCircleColor
                             }}
                         >
                             <div className="inner-circle2" 
                                 style={{
-                                    backgroundColor: this.props.characteristics.secondCircleColor
+                                    backgroundColor: characteristics.secondCircleColor
                                 }}
                             >
                                 <div className="inner-circle3" 
                                     style={{
-                                        backgroundColor: this.props.characteristics.firstCircleColor
+                                        backgroundColor: characteristics.firstCircleColor
                                     }} 
                                 >
-                                    {this.props.characteristics.showMinuteScale && 
+                                    {characteristics.showMinuteScale && 
                                     <MinuteScale 
-                                        color={this.props.characteristics.colorOfScalesAndNumbers}
+                                        color={characteristics.colorOfScalesAndNumbers}
                                     />
                                     }
-                                    {this.props.characteristics.showHourScale && 
+                                    {characteristics.showHourScale && 
                                     <HourScale 
-                                        color={this.props.characteristics.colorOfScalesAndNumbers}
+                                        color={characteristics.colorOfScalesAndNumbers}
                                     /> 
                                     }
-                                    {this.props.characteristics.showNumbers &&
+                                    {characteristics.showNumbers &&
                                     <Numbers 
-                                        numerals={this.props.characteristics.numerals} 
-                                        numberSize={this.props.characteristics.numberSize} 
-                                        radialDirectionOfNumbers={this.props.characteristics.radialDirectionOfNumbers} 
-                                        color={this.props.characteristics.colorOfScalesAndNumbers}
+                                        numerals={characteristics.numerals} 
+                                        numberSize={characteristics.numberSize} 
+                                        radialDirectionOfNumbers={characteristics.radialDirectionOfNumbers} 
+                                        color={characteristics.colorOfScalesAndNumbers}
                                     /> 
                                     }
                                     <MinuteHand 
                                         minuteHandAngle={this.state.minuteHandAngle} 
-                                        color={this.props.characteristics.minuteHandColor}
+                                        color={characteristics.minuteHandColor}
                                     />
                                     <HourHand 
                                         hourHandAngle={this.state.hourHandAngle} 
-                                        color={this.props.characteristics.hourHandColor}
+                                        color={characteristics.hourHandColor}
                                     />
                                     <SecondHand 
                                         secondHandAngle={this.state.secondHandAngle} 
-                                        color={this.props.characteristics.secondHandColor}
+                                        color={characteristics.secondHandColor}
                                     />
                                     <CenterDot 
-                                        color={this.props.characteristics.centerDotColor}
+                                        color={characteristics.centerDotColor}
                                     />
                                 </div>
                             </div>
@@ -135,28 +154,4 @@ class Clock extends PureComponent {
     }
 }
 
-Clock.defaultProps = {
-    characteristics:   { 
-        showRomanNumbers: false,
-        showMinuteScale: true,
-        showHourScale: true,
-        showNumbers: true,
-        radialDirectionOfNumbers: false,
-        showOuterRing: true,
-        showInnerRing: true,
-        colorOfScalesAndNumbers: `black`,
-        hourHandColor: `#151515`,
-        minuteHandColor: `black`,
-        secondHandColor: `red`,
-        firstCircleColor: `white`,
-        secondCircleColor: `white`,
-        thirdCircleColor: `white`,
-        fourthCircleColor: `black`,
-        centerDotColor: `black`,
-        width: 300,
-        numberSize: 150,
-        iana: `Europe/London`
-    }
-}
- 
 export default Clock;
