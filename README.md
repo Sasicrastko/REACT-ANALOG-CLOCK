@@ -70,7 +70,7 @@ export default App
 
 ## Properties
 
-Since v1.2.0 there is no `showRomanNumbers` but there is `numerals` instead. This enables usage of different numerical systems or characters an emojis.
+Propery `numerals` enables usage of different numerical systems or characters and emojis.
 ![numerals](https://github.com/Sasicrastko/REACT-ANALOG-CLOCK/blob/master/images/numerals.png "Examples of different numeral systems")
 
 | Characteristic           | Description                                                                                                                                                  | Example values                                                                                                                                                                                                                                                                                                   | Default value      |
