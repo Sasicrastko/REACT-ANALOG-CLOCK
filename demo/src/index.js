@@ -23,7 +23,7 @@ const json = `
     "fourthCircleColor": "yellow",
     "centerDotColor": "black",
     "numberSize": 200,
-    "iana": "America/New_York",
+    "iana": "Americ",
     "numbersStyle": {
       "width": "100%",
       "height": "100%",

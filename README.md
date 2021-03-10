@@ -59,7 +59,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <AnalogClock style={style} />
+        <AnalogClock characteristics={style} />
       </div>
     )
   }
