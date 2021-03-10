@@ -3,13 +3,11 @@ import React from "react"
 import { render } from "react-dom"
 import AnalogClock from "../../src/index"
 
-// "width": 270,
-
 const json = `
 {
     "width": 300,
     "numerals": "eastern_arabic",
-    "showNumbers": true,
+    "showNumbers": false,
     "radialDirectionOfNumbers": true,
     "showOuterRing": false,
     "showInnerRing": true,
@@ -23,14 +21,7 @@ const json = `
     "fourthCircleColor": "yellow",
     "centerDotColor": "black",
     "numberSize": 200,
-    "iana": "America/New_York",
-    "numbersStyle": {
-      "width": "100%",
-      "height": "100%",
-      "display": "flex",
-      "alignItems": "center",
-      "justifyContent": "center"
-    }
+    "iana": "Europe/London"
   }`
 
 const testingData = JSON.parse(json)

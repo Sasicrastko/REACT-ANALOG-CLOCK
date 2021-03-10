@@ -1,19 +1,17 @@
-import React, { PureComponent } from "react"
+import React from "react"
 
-class MinuteHand extends PureComponent {
-  render() {
-    return (
+const MinuteHand = (props) => {
+  return (
+    <div
+      className="minute-hand"
+      style={{ transform: `rotate(${props.minuteHandAngle}deg)` }}
+    >
       <div
-        className="minute-hand"
-        style={{ transform: `rotate(${this.props.minuteHandAngle}deg)` }}
-      >
-        <div
-          className="visible-part-min-hand"
-          style={{ background: this.props.color }}
-        ></div>
-      </div>
-    )
-  }
+        className="visible-part-min-hand"
+        style={{ background: props.color }}
+      ></div>
+    </div>
+  )
 }
 
 export default MinuteHand

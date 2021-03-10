@@ -1,4 +1,4 @@
-import React, { PureComponent } from "react"
+import React, { useState, useEffect } from "react"
 import MinuteScale from "./MinuteScale"
 import HourScale from "./HourScale"
 import MinuteHand from "./MinuteHand"
@@ -9,47 +9,24 @@ import "./Clock.css"
 import CenterDot from "./CenterDot"
 import defaultCharacteristics from "../defaultCharacteristics"
 
-class Clock extends PureComponent {
-  constructor(props) {
-    super(props)
-    this.state = this.calculateHandAngles()
-    this.timer = null
-  }
+const Clock = (props) => {
+  const [date, setDate] = useState(new Date())
+  const characteristics = Object.assign(
+    defaultCharacteristics,
+    props.characteristics
+  )
 
-  componentDidMount() {
-    this.timer = setInterval(() => this.setHandAngles(), 1000)
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.timer)
-  }
-
-  calculateHandAngles() {
-    const d = this.getDate(this.props.characteristics.iana)
-
-    const sec = d.getSeconds()
-    const min = d.getMinutes()
-    const hour = d.getHours()
-
-    return {
-      secondHandAngle: (sec * 360) / 60 - 90, // -90 because CSS set hands horizontaly when angle is 0deg,
-      minuteHandAngle: (min * 360) / 60 - 90,
-      hourHandAngle: (hour * 360) / 12 + (min * 30) / 60 - 90,
+  useEffect(() => {
+    let timer = setInterval(() => setDate(new Date()), 1000)
+    return () => {
+      clearInterval(timer)
     }
-  }
+  })
 
-  setHandAngles() {
-    const angles = this.calculateHandAngles()
-    this.setState(angles)
-  }
-
-  // the browsers cannot read IANA timezones when creating a date,
-  // nor have  methods to change the timezones on  existing Date object
-
-  getDate(iana) {
-    const date = new Date()
+  const calculateHandAngles = (date, iana) => {
+    let ianaDate
     try {
-      return new Date(
+      ianaDate = new Date(
         date.toLocaleString("en-US", {
           timeZone: iana,
         })
@@ -61,83 +38,89 @@ class Clock extends PureComponent {
           "https://en.wikipedia.org/wiki/List_of_tz_database_time_zones"
         )
       }
-      return new Date()
+      ianaDate = new Date()
+    }
+    const sec = ianaDate.getSeconds()
+    const min = ianaDate.getMinutes()
+    const hour = ianaDate.getHours()
+
+    return {
+      secondHandAngle: (sec * 360) / 60 - 90, // -90 because CSS set hands horizontaly when angle is 0deg,
+      minuteHandAngle: (min * 360) / 60 - 90,
+      hourHandAngle: (hour * 360) / 12 + (min * 30) / 60 - 90,
     }
   }
 
-  render() {
-    const characteristics = Object.assign(
-      defaultCharacteristics,
-      this.props.characteristics
-    )
-    return (
+  const { secondHandAngle, minuteHandAngle, hourHandAngle } = calculateHandAngles(
+    date,
+    props.characteristics.iana
+  )
+
+  return (
+    <div
+      className="container"
+      style={{
+        width: Number(characteristics.width),
+        height: Number(characteristics.width),
+      }}
+    >
       <div
-        className="container"
+        className="outer-circle"
         style={{
-          width: Number(characteristics.width),
-          height: Number(characteristics.width),
+          backgroundColor: characteristics.fourthCircleColor,
         }}
       >
         <div
-          className="outer-circle"
+          className="inner-circle1"
           style={{
-            backgroundColor: characteristics.fourthCircleColor,
+            backgroundColor: characteristics.thirdCircleColor,
           }}
         >
           <div
-            className="inner-circle1"
+            className="inner-circle2"
             style={{
-              backgroundColor: characteristics.thirdCircleColor,
+              backgroundColor: characteristics.secondCircleColor,
             }}
           >
             <div
-              className="inner-circle2"
+              className="inner-circle3"
               style={{
-                backgroundColor: characteristics.secondCircleColor,
+                backgroundColor: characteristics.firstCircleColor,
               }}
             >
-              <div
-                className="inner-circle3"
-                style={{
-                  backgroundColor: characteristics.firstCircleColor,
-                }}
-              >
-                {characteristics.showMinuteScale && (
-                  <MinuteScale color={characteristics.colorOfScalesAndNumbers} />
-                )}
-                {characteristics.showHourScale && (
-                  <HourScale color={characteristics.colorOfScalesAndNumbers} />
-                )}
-                {characteristics.showNumbers && (
-                  <Numbers
-                    numerals={characteristics.numerals}
-                    numberSize={characteristics.numberSize}
-                    radialDirectionOfNumbers={
-                      characteristics.radialDirectionOfNumbers
-                    }
-                    color={characteristics.colorOfScalesAndNumbers}
-                  />
-                )}
-                <MinuteHand
-                  minuteHandAngle={this.state.minuteHandAngle}
-                  color={characteristics.minuteHandColor}
+              {characteristics.showMinuteScale && (
+                <MinuteScale color={characteristics.colorOfScalesAndNumbers} />
+              )}
+              {characteristics.showHourScale && (
+                <HourScale color={characteristics.colorOfScalesAndNumbers} />
+              )}
+              {characteristics.showNumbers && (
+                <Numbers
+                  numerals={characteristics.numerals}
+                  numberSize={characteristics.numberSize}
+                  radialDirectionOfNumbers={characteristics.radialDirectionOfNumbers}
+                  color={characteristics.colorOfScalesAndNumbers}
                 />
-                <HourHand
-                  hourHandAngle={this.state.hourHandAngle}
-                  color={characteristics.hourHandColor}
-                />
-                <SecondHand
-                  secondHandAngle={this.state.secondHandAngle}
-                  color={characteristics.secondHandColor}
-                />
-                <CenterDot color={characteristics.centerDotColor} />
-              </div>
+              )}
+              <MinuteHand
+                minuteHandAngle={minuteHandAngle}
+                color={characteristics.minuteHandColor}
+              />
+              <HourHand
+                hourHandAngle={hourHandAngle}
+                color={characteristics.hourHandColor}
+              />
+              <SecondHand
+                secondHandAngle={secondHandAngle}
+                color={characteristics.secondHandColor}
+              />
+              <CenterDot color={characteristics.centerDotColor} />
             </div>
           </div>
         </div>
       </div>
-    )
-  }
+    </div>
+  )
 }
 
 export default Clock

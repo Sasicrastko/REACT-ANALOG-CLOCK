@@ -1,39 +1,37 @@
-import React, { PureComponent } from "react"
+import React from "react"
 
-class MinuteScale extends PureComponent {
-  render() {
-    return (
-      <div className="minute-scale">
-        {Array.from(Array(60).keys()).map((S) => (
+const MinuteScale = (props) => {
+  return (
+    <div className="minute-scale">
+      {Array.from(Array(60).keys()).map((S) => (
+        <div
+          key={S}
+          className="diameter"
+          style={{
+            transform: `rotate(${(S * 360) / 60}deg)`,
+            position: `absolute`,
+            top: `49.5%`,
+            left: "0%",
+            width: `100%`,
+            height: `1%`,
+          }}
+        >
           <div
-            key={S}
-            className="diameter"
+            className="M"
             style={{
-              transform: `rotate(${(S * 360) / 60}deg)`,
               position: `absolute`,
-              top: `49.5%`,
-              left: "0%",
-              width: `100%`,
-              height: `1%`,
+              backgroundColor: props.color,
+              borderRight: `2px solid ${props.color}`,
+              top: `0%`,
+              left: `101%`,
+              width: `3%`,
+              height: `100%`,
             }}
-          >
-            <div
-              className="M"
-              style={{
-                position: `absolute`,
-                backgroundColor: this.props.color,
-                borderRight: `2px solid ${this.props.color}`,
-                top: `0%`,
-                left: `101%`,
-                width: `3%`,
-                height: `100%`,
-              }}
-            ></div>
-          </div>
-        ))}
-      </div>
-    )
-  }
+          ></div>
+        </div>
+      ))}
+    </div>
+  )
 }
 
 export default MinuteScale
