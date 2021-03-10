@@ -1,4 +1,4 @@
-import React from "react"
+import React, { memo } from "react"
 
 const MinuteHand = (props) => {
   return (
@@ -14,4 +14,8 @@ const MinuteHand = (props) => {
   )
 }
 
-export default MinuteHand
+export default memo(MinuteHand, (props, nextProps) => {
+  if (props.minuteHandAngle === nextProps.minuteHandAngle) {
+    return true
+  }
+})

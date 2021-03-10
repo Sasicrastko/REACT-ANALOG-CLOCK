@@ -1,4 +1,4 @@
-import React from "react"
+import React, { memo } from "react"
 
 const MinuteScale = (props) => {
   return (
@@ -34,4 +34,8 @@ const MinuteScale = (props) => {
   )
 }
 
-export default MinuteScale
+export default memo(MinuteScale, (props, nextProps) => {
+  if (props.color === nextProps.color) {
+    return true
+  }
+})
