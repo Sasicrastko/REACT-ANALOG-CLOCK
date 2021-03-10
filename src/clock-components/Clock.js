@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, memo } from "react"
 import MinuteScale from "./MinuteScale"
 import HourScale from "./HourScale"
 import MinuteHand from "./MinuteHand"

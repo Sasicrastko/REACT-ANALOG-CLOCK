@@ -34,8 +34,4 @@ const HourScale = (props) => {
   )
 }
 
-export default memo(HourScale, (props, nextProps) => {
-  if (props.color === nextProps.color) {
-    return true
-  }
-})
+export default memo(HourScale, () => true)
