@@ -28,6 +28,7 @@ The watch consists of the base, minute scale, hour scale, numbers, hands and the
 ![elements](https://github.com/Sasicrastko/REACT-ANALOG-CLOCK/blob/master/images/elements1.png "Elements of the clock")
 
 ## Usage
+Versions >= 1.6.0 are with hooks. If you for some reason want to use this package in older React then use version 1.5.0. 
 
 An example of usage:
 
