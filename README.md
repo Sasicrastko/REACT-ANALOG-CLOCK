@@ -28,6 +28,7 @@ The watch consists of the base, minute scale, hour scale, numbers, hands and the
 ![elements](https://github.com/Sasicrastko/REACT-ANALOG-CLOCK/blob/master/images/elements1.png "Elements of the clock")
 
 ## Usage
+Versions >= 1.6.0 are with hooks. If you for some reason want to use this package in older React then use version 1.5.0. 
 
 An example of usage:
 
@@ -70,7 +71,7 @@ export default App
 
 ## Properties
 
-Since v1.2.0 there is no `showRomanNumbers` but there is `numerals` instead. This enables usage of different numerical systems or characters an emojis.
+Propery `numerals` enables usage of different numerical systems or characters and emojis.
 ![numerals](https://github.com/Sasicrastko/REACT-ANALOG-CLOCK/blob/master/images/numerals.png "Examples of different numeral systems")
 
 | Characteristic           | Description                                                                                                                                                  | Example values                                                                                                                                                                                                                                                                                                   | Default value      |
